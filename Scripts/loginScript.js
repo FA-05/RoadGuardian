@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $("#errorMessage").hide();
     
 
     $(document).on("click", "#btn-login", function(){
@@ -14,7 +15,10 @@ $(document).ready(function(){
                 if (rtn==true){
                     window.location.replace("../Pages/vigileHome.php");
                 }else{
-                    alert(rtn);
+                    $("#errorMessage").slideDown();
+                    setTimeout(function(){
+                        $("#errorMessage").slideUp();
+                    },2000)
                 }
             }
 

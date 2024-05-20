@@ -5,6 +5,7 @@ $(document).ready(function () {
     var newData = {};
     var cf_list = new Array();
     var createnewData = false;
+    var BARCODE="";
 
     getData(currentGuidatore);
 
@@ -16,19 +17,24 @@ $(document).ready(function () {
             dataType: "json",
             success: function (data) {
                 if (!createnewData) {
-                    cf_list = data;
-                    data.forEach(cf => {
+                    //alert(data["barcode"]);
+                    //alert(data["CFguidatori"]);
+                    BARCODE=data["barcode"];
+                    cf_list = JSON.parse(data["CFguidatori"]);
+                    cf_list.forEach(cf => {
+                        //alert(cf);
                         newData[cf] = new Array(0, true);
                     });
 
                 }
 
                 //alert(JSON.stringify(newData));
-                totGuidatori = data.length - 1;
+                totGuidatori = cf_list.length - 1;
                 displayBTN();
-                loadData(data[currentGuidatore]);
+                //alert(cf_list[currentGuidatore]);
+                loadData(cf_list[currentGuidatore]);
             }
-        })
+        }) 
 
     }
 
@@ -43,7 +49,6 @@ $(document).ready(function () {
             cache: false,
             dataType: "json",
             success: function (data) {
-
                 if (data.error) {
                     alert("Errore: " + data.error);
                 } else if (!data) {
@@ -72,7 +77,7 @@ $(document).ready(function () {
         $.ajax({
             url: "../Backend/getGuidatoreSinistri.php",
             method: "POST",
-            data: { codFiscale: codFiscale },
+            data: { codFiscale: codFiscale},
             cache: false,
             dataType: "json",
             success: function (data) {
@@ -99,22 +104,25 @@ $(document).ready(function () {
                         // alert(barcode);
                         //alert(JSON.stringify(array_cf));
 
-                        array_cf.forEach(cf => {
-                            if (cf == codFiscale) {
-                                sinistroExist = true;
-                                sinistriPrecedenti += "<p class='barcode'>" + barcode + "</p>"
-                            }
-
-                        })
-
-
+                        if(barcode != BARCODE){
+                            array_cf.forEach(cf => {
+                                if (cf == codFiscale) {
+                                    sinistroExist = true;
+                                    sinistriPrecedenti += "<p id='"+barcode+"' class='barcode'>" + barcode + "</p>"
+                                }
+    
+                            })
+                        }
                     });
+
+
+            
 
                     //alert(sinistriPrecedenti);
                     if (sinistroExist) {
                         $("#sinistri").append(sinistriPrecedenti);
                     } else {
-                        $("#sinistri").append("<p class='barcode'>Nessun Sinistro<p>");
+                        $("#sinistri").append("<p class='barcode'>Nessun Sinistro precedente<p>");
                     }
 
 
@@ -227,7 +235,9 @@ $(document).ready(function () {
                 data: { dati: dati , cf_list:cf_list},
                 success: function (rtn) {
                     if (rtn == true) {
-                        alert("Modifiche avvenute con successo" +rtn)
+                        sessionStorage.setItem("messaggioSinistro", "true");
+                        window.location.replace("vigileHome.php");
+                        //alert("Modifiche avvenute con successo :" +rtn)
                     } else {
                         alert("Errore durante la modifica: " + rtn);
                     }

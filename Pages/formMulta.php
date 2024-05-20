@@ -8,7 +8,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="../Scripts/multaScript.js"></script>
+    <script src="../Scripts/formMultaScript.js"></script>
     <script src="../Scripts/utilitis.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -23,21 +23,27 @@
 
 ?>
 
-<body>
-    <a  href="vigileHome.php" >
-        <button class="btn btn-warning mt-2 ml-2  md:absolute md:top-4 md:left-4"><img class="w-12 h-12" src="../Icons/back.png" alt=""></button>
-    </a>
+<body id="page">
+    <div class="mx-4 sm:mx-16 mb-4">
+        <div class="navbar bg-base-100 rounded-lg mt-4 bg-amber-300 flex justify-center items-center gap-1">
+
+            <img class="ml-4 h-14 w-14" src="../icons/logo.png" alt="">
+            <a href="vigileHome.php" class="hidden sm:inline text-xl font-bold">Road Guardian</a>
+
+        </div>
+    </div>
 
     <div class=" flex flex-col justify-center items-center">
 
         <form
-            class="flex flex-col justify-center items-center shadow-lg bg-blue-100 gap-8 h-[43rem] w-[400px] rounded-[25px] m-4">
+            class="flex flex-col justify-center items-center shadow-lg bg-gray-100 gap-8 h-[43rem] w-[430px] rounded-[25px] m-4">
             <h1 class="text-2xl font-bold  text-center">Multa</h1>
 
             <div class="inputContainer">
                 <p class="font-bold mb-2" for="targaVeicolo">Targa Veicolo</p>
-                <input class="px-4 w-[300px] h-[40px] rounded-md focus:outline-blue-400" type="text" id="targaVeicolo" list="targhe">
-                <div id="opzioni-div" class=" bg-slate-200 absolute z-10">
+                <input placeholder="AA111AA" class="px-4 w-[300px] h-[40px] rounded-md focus:outline-blue-400" type="text" id="targaVeicolo"
+                    list="targhe">
+                <div id="opzioni-div" class=" bg-slate-50 absolute z-10 border rounded-lg">
 
                 </div>
 
@@ -45,17 +51,17 @@
 
             <div class="inputContainer">
                 <p class="font-bold mb-2" for="luogo">Luogo</p>
-                <input class="px-4  w-[300px] h-[40px] rounded-md focus:outline-blue-400" type="text" id="luogo">
+                <input placeholder="Milano" class="px-4  w-[300px] h-[40px] rounded-md focus:outline-blue-400" type="text" id="luogo">
             </div>
 
             <div class="inputContainer">
                 <p class="font-bold mb-2" for="causaMulta">Causa Multa</p>
-                <input class="px-4  w-[300px] h-[40px] rounded-md focus:outline-blue-400" type="text" id="causaMulta">
+                <input placeholder="Eccesso di Velocità" class="px-4  w-[300px] h-[40px] rounded-md focus:outline-blue-400" type="text" id="causaMulta">
             </div>
 
             <div class="inputContainer">
                 <p class="font-bold mb-1" for="importo">Importo</p>
-                <input class="px-4  w-[300px] h-[40px] rounded-md focus:outline-blue-400" min="10" step="10"
+                <input placeholder="€" class="px-4  w-[300px] h-[40px] rounded-md focus:outline-blue-400" min="10" step="10"
                     type="number" id="importo">
             </div>
 
@@ -70,12 +76,15 @@
     </div>
 
 
-    <div id="insert-success-alert" role="alert" class="alert alert-success fixed top-3 right-3 w-[300px]">
-        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        <span>Multa Inserita correttamente</span>
+    
+
+    <div id="errorMessage" role="alert" class="alert alert-error fixed top-3 right-3 w-full max-w-xs md:max-w-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Compilare tutti i campi</span>
     </div>
 
 </body>

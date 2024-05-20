@@ -9,26 +9,45 @@
     <script src="../Scripts/vigileHomeScript.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
 
 </head>
+
+<?PHP
+    session_start();
+    if($_SESSION["logged-in"]==false){
+        header("Location: ../Home.php");
+    }
+
+?>
 
 <body>
 
     <div class="drawer">
         <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-        <div class="drawer-content">
-            <!-- Page content here -->
+        <div class="drawer-content mx-4">
 
 
+            <div class="navbar bg-base-100 rounded-lg mt-4 bg-amber-300">
+                <div class="navbar-start">
+                    <img class="ml-4 h-14 w-14" src="../icons/logo.png" alt="">
+                    <a href="vigileHome.php" class="hidden sm:inline text-xl font-bold">Road Guardian</a>
+                </div>
+                <div class="navbar-center">
+                    <h1 class="text-center font-bold text-2xl p-4">Home Vigile</h1>
+                </div>
+                <div class="navbar-end">
+                    <a id="btn-log-out" class="btn">Log-out</a>
+                </div>
+            </div>
 
-            <h1 class="text-center font-bold text-2xl p-4">Home Vigile</h1>
+
             <label for="my-drawer" class="m-2 btn bg-amber-200 drawer-button">Storico Multe</label>
-            
+
             <div class="flex flex-col gap-3 justify-center items-center md:flex-row">
                 <a href="formMulta.php">
                     <div
-                        class="bg-blue-100 h-64 w-64  lg:h-96 lg:w-96 flex items-center justify-center border rounded-2xl flex-col">
+                        class="bg-gray-100 shadow-lg h-64 w-64  lg:h-96 lg:w-96 flex items-center justify-center border rounded-2xl flex-col">
                         <img class="w-44  p-4" src="../Icons/fine.png" alt="">
                         <h3>Nuova Multa</h3>
                     </div>
@@ -36,17 +55,17 @@
 
                 <a href="formIncidente.php">
                     <div
-                        class="bg-blue-100 h-64 w-64 lg:h-96 lg:w-96 flex items-center justify-center border rounded-2xl flex-col">
+                        class="bg-gray-100 shadow-lg h-64 w-64 lg:h-96 lg:w-96 flex items-center justify-center border rounded-2xl flex-col">
                         <img class="w-44 p-4" src="../Icons/accident.png" alt="">
                         <h3>Segnala Incidente</h3>
                     </div>
                 </a>
             </div>
 
-            
 
 
-            
+
+
 
 
 
@@ -61,6 +80,11 @@
 
             </ul>
         </div>
+    </div>
+
+    <div id="successMessage" role="alert" class="alert alert-success fixed top-3 right-3 w-full max-w-xs md:max-w-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>        
+            <span id="messggio"></span>
     </div>
 
 

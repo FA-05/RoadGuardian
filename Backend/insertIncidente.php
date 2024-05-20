@@ -11,6 +11,7 @@
     $numeroMorti=$_POST["numeroMorti"];
     $numeroFeriti=$_POST["numeroFeriti"];
     $_SESSION["CFguidatori"]=$CFguidatori;
+    $_SESSION["barcode"]=$barcode;
 
     $stmt= $conn -> prepare("INSERT INTO sinistri (barcode, targa,luogo,numeroFeriti,numeroMorti,causaIncidente,CFguidatori,idVigile) VALUES (?,?,?,?,?,?,?,?)");
     $stmt -> bind_param("sssiissi", $barcode, $targa, $luogo,$numeroMorti, $numeroFeriti, $causaIncidente, $CFguidatori, $idVigile);

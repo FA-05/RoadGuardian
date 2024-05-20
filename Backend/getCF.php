@@ -6,7 +6,7 @@ include("config/connect.php");
     $cf = $_POST["cf"];
     $like_cf = '%' . $cf . '%'; // Create the wildcard search pattern
 
-    if ($stmt = $conn->prepare("SELECT CFproprietario FROM veicoli WHERE CFproprietario LIKE ? LIMIT 3")) {
+    if ($stmt = $conn->prepare("SELECT CFproprietario FROM veicoli WHERE CFproprietario LIKE ? LIMIT 2")) {
         $stmt->bind_param("s", $like_cf); // Bind the wildcard search pattern
 
         if ($stmt->execute()) {

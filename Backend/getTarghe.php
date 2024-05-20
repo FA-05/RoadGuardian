@@ -6,7 +6,7 @@ include("config/connect.php");
     $targa = $_POST["targa"];
     $like_targa = '%' . $targa . '%'; // Create the wildcard search pattern
 
-    if ($stmt = $conn->prepare("SELECT targa FROM veicoli WHERE targa LIKE ? LIMIT 3")) {
+    if ($stmt = $conn->prepare("SELECT targa FROM veicoli WHERE targa LIKE ? LIMIT 2")) {
         $stmt->bind_param("s", $like_targa); // Bind the wildcard search pattern
 
         if ($stmt->execute()) {
