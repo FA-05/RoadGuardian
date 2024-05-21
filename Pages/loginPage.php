@@ -8,37 +8,37 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/bootstrap-italia/dist/css/bootstrap-italia-comuni.min.css" />
+    <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 
-<body>
-
-    <div class="mx-4 sm:mx-16">
-        <div class="navbar bg-base-100 rounded-lg mt-4 bg-amber-300 flex justify-center items-center gap-1">
-
-            <img class="ml-4 h-14 w-14" src="../assets/Icons/logo.png" alt="">
-            <a href="../index.php" class="hidden sm:inline text-xl font-bold">Road Guardian</a>
-
-        </div>
-    </div>
-
+<body class="bg-gray-100 font-sans">
+<nav>
+    <?PHP
+    include ("../Pages/navbar.php")
+        ?>
+        
+</nav>
 
     <div class=" flex items-center justify-center h-screen pb-20">
         <div class="bg-gray-100 p-12 rounded-lg shadow-md w-full max-w-md">
-            <h2 class="text-4xl font-bold mb-8 text-center">Login</h2>
+            <h2 class="text-center text-2xl mb-6">Login</h2>
             <form>
                 <div class="mb-6">
-                    <label for="username" class="block text-gray-700 text-lg">Username</label>
+                    <label for="username" class="block font-medium text-gray-700">Username</label>
                     <input placeholder="Username" type="text" id="username" name="username"
-                        class="mt-2 p-3 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        class="form-control w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
                 </div>
                 <div class="mb-8">
-                    <label for="password" class="block text-gray-700 text-lg">Password</label>
+                    <label for="password" class="block font-medium text-gray-700">Password</label>
                     <input placeholder="Password" type="password" id="password" name="password"
-                        class="mt-2 p-3 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        class="form-control w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
                 </div>
                 <button id="btn-login" type="button"
-                    class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition-colors">Login</button>
+                    class="btn btn-primary w-full py-2 px-4 bg-indigo-500 hover:bg-indigo-600 text-white font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Login</button>
             </form>
+            <br>
+            <p class="text-center text-gray-600">Annulla e <a href="../index.php" class="text-indigo-500 hover:text-indigo-600">torna alla pagina principale</a></p>
         </div>
     </div>
 
@@ -81,7 +81,7 @@
                     //alert(rtn.login);
                     if (rtn.login == true) {
                         if (rtn.tipo == "admin") {
-                            window.location.replace("AdminPages/adminHome.php");
+                            window.location.replace("AdminPages/adminPatentati.php");
 
                         } else {
                             window.location.replace("vigileHome.php");

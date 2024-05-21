@@ -17,8 +17,7 @@
 </head>
 
 <body>
-
-<?php
+  <?php
   session_start();
   ?>
   <div class="skiplink">
@@ -41,7 +40,7 @@
                 if (isset($_SESSION['username']) && $_SESSION['username'] != '') {
                   ?>
                   <!-- Mostra il nome utente e il link per disconnettersi -->
-                  <a href="PHPs/logout.php" class="btn btn-primary btn-icon btn-full" href="#"
+                  <a href="logout.php" class="btn btn-primary btn-icon btn-full" href="#"
                     data-element="personal-area-login">
                     <span class="rounded-icon" aria-hidden="true">
                       <svg class="icon icon-primary">
@@ -67,19 +66,6 @@
                 }
                 ?>
               </div>
-
-              <!-- <div class="it-header-slim-right-zone" role="navigation">
-                <a href="Pages/loginPage.php" class="btn btn-primary btn-icon btn-full" href="#"
-                  data-element="personal-area-login">
-                  <span class="rounded-icon" aria-hidden="true">
-                    <svg class="icon icon-primary">
-                      <use xlink:href="assets/bootstrap-italia/dist/svg/sprites.svg#it-user"></use>
-                    </svg>
-                  </span>
-                  <span class="d-none d-lg-block">Devi inserire una multa? Accedi qui</span>
-
-                </a>
-              </div> -->
             </div>
           </div>
         </div>
@@ -165,19 +151,16 @@
                 <h1 class="title-xxxlarge" data-element="service-title">
                   Pagamento multa
                 </h1>
-
                 <div class="d-flex flex-wrap cmp-heading__tag">
                   <div class="cmp-tag">
                     <span class="cmp-tag__tag title-xsmall">Servizio attivo</span>
                   </div>
                 </div>
-
                 <p class="subtitle-small mb-3">
                   Il servizio permette di pagare online le multe ricevute
                   dalla polizia municipale o di prenotare un appuntamento per
                   pagare presso gli uffici.
                 </p>
-
                 <div class="cmp-card mb-0">
                   <div class="card has-bkg-grey shadow-sm p-4 pt-lg-30 pb-lg-30 pl-lg-30 pr-lg-30">
                     <div class="card-header border-0 p-0 mb-lg-30 m-0">
@@ -214,7 +197,6 @@
               <hr class="d-none d-lg-block mb-0 mt-2" />
             </div>
           </div>
-
           <div class="container">
             <div class="row mt-lg-80 mt-4">
               <div class="col-12 col-lg-3 mb-4">
@@ -286,7 +268,6 @@
                   </div>
                 </aside>
               </div>
-
               <div class="col-12 col-lg-8 offset-lg-1">
                 <section class="mb-30">
                   <h2 class="mb-3" id="who-needs">A chi è rivolto</h2>
@@ -296,7 +277,6 @@
                     del codice della strada nel territorio comunale.
                   </p>
                 </section>
-
                 <section class="mb-30">
                   <h2 class="mb-3" id="how-to">Come fare</h2>
                   <p class="text-paragraph lora mb-0">
@@ -308,7 +288,6 @@
                     presso gli uffici.
                   </p>
                 </section>
-
                 <section class="mb-30 has-bg-grey p-3 p-lg-4">
                   <h2 class="mb-3" id="needed">Cosa serve</h2>
                   <p class="text-paragraph lora fw-semibold mb-0">
@@ -326,7 +305,6 @@
                     </li>
                   </ul>
                 </section>
-
                 <section class="mb-30">
                   <h2 class="mb-3" id="deadlines">Tempi e scadenze</h2>
                   <ul class="list-wrapper lora">
@@ -345,7 +323,6 @@
                     </li>
                   </ul>
                 </section>
-
                 <section class="mb-30 has-bg-grey p-4">
                   <h2 class="mb-3" id="service-access">Accedi al servizio</h2>
                   <p class="text-paragraph lora mb-4">
@@ -358,7 +335,6 @@
                     </button>
                   </a>
                 </section>
-
                 <section class="it-page-section">
                   <h2 class="mb-3" id="contacts">Contatti</h2>
                   <div class="row">
