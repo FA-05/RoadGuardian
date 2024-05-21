@@ -84,7 +84,7 @@
                             window.location.replace("AdminPages/adminPatentati.php");
 
                         } else {
-                            window.location.replace("vigileHome.php");
+                            window.location.replace("formIncidente.php");
                         }
                     } else {
                         //alert("hole");

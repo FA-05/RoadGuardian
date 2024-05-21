@@ -11,25 +11,28 @@
     <script src="../Scripts/genbar.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="assets/bootstrap-italia/dist/css/bootstrap-italia-comuni.min.css" />
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="../assets/css/style.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <?php
 session_start();
 if ($_SESSION["logged-in"] == false) {
     header("Location: ../index.php");
+    
 }
 ?>
 
-<body id="page">
-    <div class="mx-4 sm:mx-16 mb-4">
-        <div class="navbar bg-base-100 rounded-lg mt-4 bg-amber-300 flex justify-center items-center gap-1">
+<?PHP
+    include ("../Pages/navbar.php");
+        ?>
 
-            <img class="ml-4 h-14 w-14" src="../assets/Icons/logo.png" alt="">
-            <a href="vigileHome.php" class="hidden sm:inline text-xl font-bold">Road Guardian</a>
+<body class="bg-gray-100 font-sans" id="page">
 
-        </div>
-    </div>
+<nav>
+    
+        
+</nav>
+
 
     <div class="flex flex-col justify-center items-center mb-36">
         <form
