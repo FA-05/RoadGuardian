@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+
     
 
     getMultaData();
@@ -8,10 +9,11 @@ $(document).ready(function(){
     function getMultaData(){
 
         $.ajax({
-            url:"../../Backend/getPatentatiData.php",
+            url:"../../Backend/getVigiliData.php",
             cache: false,
             dataType: "json",
             success:function(rtn){
+
                 if(rtn.error){
                     alert("Errore nel fetch dei dati: "+ rtn.error);
                 }else{
@@ -30,28 +32,20 @@ $(document).ready(function(){
 
         
 
-        data.forEach(patentato => {
+        data.forEach(veicolo => {
             $table +="<tr class='hover'>";
-            $table +="<td>"+patentato["CF"]+"</td>";
-            $table +="<td>"+patentato["nome"]+"</td>";
-            $table +="<td>"+patentato["cognome"]+"</td>";
-            $table +="<td>"+patentato["numeroPatente"]+"</td>";
-            $table +="<td>"+patentato["puntiPatente"]+"</td>";
-            $table +="<td>"+patentato["indirizzo"]+"</td>";
-            $table +="<td>"+patentato["email"]+"</td>";
-
-            if(patentato["patenteRitirata"]==1){
-                $table +="<td>SI</td>";
-            }else{
-                $table +="<td>NO</td>";
-            }
-            
-            
+            $table +="<td>"+veicolo["idVigile"]+"</td>";
+            $table +="<td>"+veicolo["nome"]+"</td>";
+            $table +="<td>"+veicolo["cogome"]+"</td>";
+            $table +="<td>"+veicolo["email"]+"</td>"; 
+            $table +="<td>"+veicolo["telefono"]+"</td>";  
+            $table +="<td>"+veicolo["indirizzo"]+"</td>";             
             $table +="</tr>";
         });
 
         $("#Table").append($table);
     }   
+
 
     $(document).on("click", "#btn-log-out", function(){
 

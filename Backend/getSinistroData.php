@@ -5,12 +5,12 @@
 
     if($stmt -> execute()){
         $result = $stmt -> get_result();
-        $Multe=[];
+        $sinistro=[];
         while($row = $result -> fetch_assoc()){
-            $Multe[]=$row;
+            $sinistro[]=$row;
         }
 
-        echo json_encode($Multe);
+        echo json_encode($sinistro);
     }else{
         echo json_encode(["error" => "Errore nell'esecuzione della query"]);
     } 

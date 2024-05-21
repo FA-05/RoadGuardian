@@ -12,7 +12,7 @@ function generateBarcode(){
 
     return barcode;
 }
-
+ 
 
 function BarcodeExists(barcode){
     //alert(barcode);

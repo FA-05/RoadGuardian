@@ -7,6 +7,8 @@ $(document).ready(function () {
     var createnewData = false;
     var BARCODE="";
 
+    $("#guidatore-box").show();
+    $("#allert-box").hide();
     getData(currentGuidatore);
 
     function getData(currentGuidatore) {
@@ -21,6 +23,7 @@ $(document).ready(function () {
                     //alert(data["CFguidatori"]);
                     BARCODE=data["barcode"];
                     cf_list = JSON.parse(data["CFguidatori"]);
+                    //alert(cf_list);
                     cf_list.forEach(cf => {
                         //alert(cf);
                         newData[cf] = new Array(0, true);
@@ -40,7 +43,6 @@ $(document).ready(function () {
 
     function loadData(data) {
         let codFiscale = data;
-        //alert("codice fiscale: " + codFiscale);
 
         $.ajax({
             url: "../Backend/getGuidatoreData.php",
@@ -49,27 +51,30 @@ $(document).ready(function () {
             cache: false,
             dataType: "json",
             success: function (data) {
-                if (data.error) {
-                    alert("Errore: " + data.error);
-                } else if (!data) {
-                    alert("No data found");
+                //alert(JSON.stringify(data));
+                if (!data || jQuery.isEmptyObject(data)) {
+                    $("#guidatore-box").hide();
+                    $("#allert-box").show();
+                    $("#AlertCFGuidatore").text("Codice Fiscale: "+codFiscale);
+                    
                 } else {
-                    //alert(JSON.stringify(data));
-
-
-                    $("#nomeCognome").text(data["nome"] + " " + data["cognome"]);
-                    $("#numeroPatente").text(data["numeroPatente"]);
-                    $("#puntiPatente").text(data["puntiPatente"]);
-
-
-                    loadSinistri(codFiscale);
-
-
-
+                    if (data.error) {
+                        alert("Errore: " + data.error);
+                    } else {
+                        $("#guidatore-box").show();
+                        $("#allert-box").hide();
+                        $("#nomeCognome").text(data["nome"] + " " + data["cognome"]);
+                        $("#numeroPatente").text(data["numeroPatente"]);
+                        $("#puntiPatente").text(data["puntiPatente"]);
+                        loadSinistri(codFiscale);
+                    }
                 }
+            },
+            error: function(xhr, status, error) {
+                alert("Errore nella richiesta AJAX: " + error);
             }
         });
-
+        
     }
 
 
@@ -132,7 +137,7 @@ $(document).ready(function () {
         });
     }
 
-    $(document).on("click", "#next-btn", function () {
+    $(document).on("click", ".next-btn", function () {
         if (saveData()) {
             currentGuidatore++;
             displayBTN();
@@ -145,7 +150,7 @@ $(document).ready(function () {
 
     });
 
-    $(document).on("click", "#before-btn", function () {
+    $(document).on("click", ".before-btn", function () {
         if (saveData()) {
             currentGuidatore--;
             displayBTN();
@@ -160,22 +165,22 @@ $(document).ready(function () {
         $(".barcode").remove();
         checkPatente();
         if (currentGuidatore == 0) {
-            $("#before-btn").hide();
-            $("#arrow-btn").removeClass("justify-between");
-            $("#arrow-btn").addClass("justify-end");
+            $(".before-btn").hide();
+            $(".arrow-btn").removeClass("justify-between");
+            $(".arrow-btn").addClass("justify-end");
         } else {
-            $("#before-btn").show()
-            $("#arrow-btn").removeClass("justify-end");
-            $("#arrow-btn").addClass("justify-between");
+            $(".before-btn").show()
+            $(".arrow-btn").removeClass("justify-end");
+            $(".arrow-btn").addClass("justify-between");
 
         }
 
         if (currentGuidatore == totGuidatori) {
-            $("#next-btn").hide();
+            $(".next-btn").hide();
             $("#salva-btn").show();
 
         } else {
-            $("#next-btn").show();
+            $(".next-btn").show();
             $("#salva-btn").hide();
         }
 

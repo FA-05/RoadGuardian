@@ -34,8 +34,8 @@
     </div>
 
 
-    <div class="flex flex-col items-center justify-center mt-20 h-120">
-        <div class="relative bg-gray-100 rounded-lg shadow-xl w-full max-w-4xl p-10 mb-4">
+    <div id="guidatore-box" class="flex flex-col items-center justify-center mt-20 h-120">
+        <div class="relative bg-gray-100 rounded-lg shadow-xl w-[60rem] h-[23rem] p-10 mb-4">
             <button id="ritira-btn" type="button"
                 class="absolute top-4 right-4 bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-600 transition duration-300 ease-in-out">Ritira
                 Patente</button>
@@ -71,17 +71,38 @@
                 </div>
             </div>
 
-            <div id="arrow-btn" class="flex justify-between items-center mt-6">
-                <button id="before-btn" type="button"
-                    class="btn bg-blue-500 text-white px-4 py-2 w-24  rounded-lg shadow-md hover:bg-blue-600 transition duration-300 ease-in-out">←</button>
-                <button id="next-btn" type="button"
-                    class="btn bg-blue-500 text-white px-4 py-2 w-24 rounded-lg shadow-md hover:bg-blue-600 transition duration-300 ease-in-out">→</button>
+            <div id="" class=" arrow-btn flex justify-between items-center mt-6">
+                <button id="" type="button"
+                    class="before-btn btn bg-blue-500 text-white px-4 py-2 w-24  rounded-lg shadow-md hover:bg-blue-600 transition duration-300 ease-in-out">←</button>
+                <button id="" type="button"
+                    class=" next-btn btn bg-blue-500 text-white px-4 py-2 w-24 rounded-lg shadow-md hover:bg-blue-600 transition duration-300 ease-in-out">→</button>
             </div>
         </div>
 
-        <button id="salva-btn"
-            class="btn bg-green-500 text-white w-[25%] py-3 rounded-lg shadow-md hover:bg-green-600 transition duration-300 ease-in-out">Salva</button>
     </div>
+
+    <div id="allert-box" class="flex flex-col items-center justify-center mt-20 h-120">
+        <div class="relative bg-gray-100 rounded-lg shadow-xl w-[60rem] h-[23rem] p-10 mb-4">
+            <div class="flex justify-center items-center flex-col bg-red-100 border border-red-500 text-red-700 px-4 py-3 rounded relative h-[12rem]"
+                role="alert">
+                <h1 class="text-3xl font-bold  mb-6">ATTENZIONE! GUIDATORE SENZA PATENTE</h1>
+                <p id="AlertCFGuidatore" class="block text-xl  mb-2">null</p>
+            </div>
+
+
+            <div id="" class=" arrow-btn flex justify-between items-center mt-6">
+                <button id="" type="button"
+                    class="before-btn btn bg-blue-500 text-white px-4 py-2 w-24  rounded-lg shadow-md hover:bg-blue-600 transition duration-300 ease-in-out">←</button>
+                <button id="" type="button"
+                    class=" next-btn btn bg-blue-500 text-white px-4 py-2 w-24 rounded-lg shadow-md hover:bg-blue-600 transition duration-300 ease-in-out">→</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center items-center">
+        <button id="salva-btn" class="m-auto  btn bg-green-500 text-white w-[25%] py-3 rounded-lg shadow-md hover:bg-green-600 transition duration-300 ease-in-out">Salva</button>
+    </div>
+    
 
 </body>
 

@@ -3,6 +3,10 @@ $(document).ready(function(){
     
 
     getMultaData();
+    
+    sessionStorage.removeItem("tipo");
+    sessionStorage.setItem("tipo", "admin");
+
 
 
     function getMultaData(){
@@ -32,7 +36,7 @@ $(document).ready(function(){
 
         data.forEach(sinistro => {
             $table +="<tr class='hover'>";
-            $table +="<td>"+sinistro["barcode"]+"</td>";
+            $table +="<td class='barcode cursor-pointer'>"+sinistro["barcode"]+"</td>";
             $table +="<td>"+sinistro["targa"]+"</td>";
             $table +="<td>"+sinistro["CFguidatori"]+"</td>";
             $table +="<td>"+sinistro["data_ora"]+"</td>";
@@ -67,6 +71,44 @@ $(document).ready(function(){
             }
         });
 
+    });
+
+    $(document).on("click", ".barcode", function(){
+
+        let code=$(this).text();
+
+        //alert(code);
+        $.ajax({
+            url: "../../Backend/getCodeInfo.php",
+            method: "POST",
+            data: {code: code},
+            dataType: "json", // Assicurati di trattare la risposta come JSON
+            success: function(response){
+                if(response.error) {
+                    alert(response.error);
+                } else {
+                    //alert(JSON.stringify(response))
+                    let data=response["dati"];
+                    let tipo= response["tipo"];
+                    //alert(JSON.stringify(data));
+                    sessionStorage.setItem("data", JSON.stringify(data));
+
+                    if(tipo=="multa"){
+                        //alert("MULTA")
+                        window.location.replace("../../Pages/infoMulta.php")
+                    }else{
+                        //alert("Sinistro");
+                        //alert(JSON.stringify(data));
+                        window.location.replace("../../Pages/infoSinistro.php")
+
+                        
+                    }
+                }
+            },
+            error: function(xhr, status, error) {
+                alert("Errore: "+ error + " STATUS: "+status +" XHR: "+xhr);
+            }
+        });
     });
 
 });

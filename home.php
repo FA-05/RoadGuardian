@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="Style/generalStyle.css">
 </head>
 
+<?PHP
+    session_start();
+   
+ 
+?>
 <body>
 
     <div id="page" class="mx-4 sm:mx-16">

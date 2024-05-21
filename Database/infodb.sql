@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3308
--- Creato il: Mag 21, 2024 alle 06:51
+-- Creato il: Mag 21, 2024 alle 21:51
 -- Versione del server: 10.4.32-MariaDB
 -- Versione PHP: 8.1.25
 
@@ -243,7 +243,9 @@ INSERT INTO `sinistri` (`barcode`, `targa`, `data_ora`, `luogo`, `numeroFeriti`,
 ('23456788', '[\"CD555GH\",\"IJ777KL\"]', '2021-10-15 08:45:00', 'Autostrada A1, km 123', 1, 1, 'Eccesso di velocità', '[\"MRCNER80A01H501Y\",\"FRNSMM80A01H501A\"]', 2),
 ('34567898', '[\"KL888RR\",\"MN999SS\"]', '2022-02-20 13:15:00', 'Via Milano, 456', 2, 0, 'Mancato rispetto della precedenza', '[\"SLCGTR80A01H501B\",\"ANNBRZ80A01H501C\"]', 3),
 ('45678998', '[\"QR888TT\",\"RS999UV\"]', '2021-12-08 21:00:00', 'Via Napoli, 789', 0, 0, 'Guasto meccanico', '[\"GLRGRN80A01H501D\"]', 4),
-('56789998', '[\"VW888XX\",\"XY999ZA\"]', '2022-01-10 07:30:00', 'Via Torino, 321', 1, 0, 'Condizioni meteorologiche avverse', '[\"LRSBLU80A01H501E\",\"FLCLNC80A01H501F\"]', 5);
+('4796941', '[\"AB123CD\",\"YZ901AB\",\"EF456GH\"]', '2024-05-21 21:29:06', 'Trento', 1, 1, 'aasda', '[\"GLVVRD80A01H501X\",\"MarcoPoloCF\",\"LCABNC80A01H501Z\"]', 3),
+('56789998', '[\"VW888XX\",\"XY999ZA\"]', '2022-01-10 07:30:00', 'Via Torino, 321', 1, 0, 'Condizioni meteorologiche avverse', '[\"LRSBLU80A01H501E\",\"FLCLNC80A01H501F\"]', 5),
+('9968006', '[\"AB123CD\",\"AAAA\"]', '2024-05-21 20:43:00', 'AAAA', 1, 1, 'AAAA', '[\"GLVVRD80A01H501X\",\"AAAA\"]', 1);
 
 -- --------------------------------------------------------
 
@@ -257,20 +259,24 @@ CREATE TABLE `utenti` (
   `password` varchar(50) NOT NULL,
   `tipo` varchar(50) NOT NULL,
   `nome` varchar(50) NOT NULL,
-  `cognome` varchar(50) NOT NULL
+  `cognome` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `telefono` varchar(50) NOT NULL,
+  `indirizzo` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dump dei dati per la tabella `utenti`
 --
 
-INSERT INTO `utenti` (`idVigile`, `username`, `password`, `tipo`, `nome`, `cognome`) VALUES
-(1, 'mario.rossi', '123', 'vigile', 'mario', 'rossi'),
-(2, 'admin', 'admin', 'admin', 'admin', 'admin'),
-(3, 'vigile3', '123', 'vigile', 'Francesco', 'Russo'),
-(4, 'vigile4', '123', 'vigile', 'Andrea', 'Verdi'),
-(5, 'vigile5', '123', 'vigile', 'Marco', 'Bianchi'),
-(6, 'vigile6', '123', 'vigile', 'Stefano', 'Neri');
+INSERT INTO `utenti` (`idVigile`, `username`, `password`, `tipo`, `nome`, `cognome`, `email`, `telefono`, `indirizzo`) VALUES
+(0, 'admin', 'admin', 'admin', 'admin', 'admin', 'admin', 'admin', 'admin'),
+(1, 'vigile1', '123', 'vigile', 'Cosimo', 'De Conti', 'cosimo.deconti@email.it', '3201234567', 'Via Roma 1'),
+(2, 'vigile2', '123', 'vigile', 'Ludovica', 'Principato', 'ludovica.principato@email.it', '3201234568', 'Via Milano 2'),
+(3, 'vigile3', '123', 'vigile', 'Taddeo', 'Benevento', 'taddeo.benevento@email.it', '3201234569', 'Via Napoli 3'),
+(4, 'vigile4', '123', 'vigile', 'Serena', 'Altimari', 'serena.altimari@email.it', '3201234570', 'Via Torino 4'),
+(5, 'vigile5', '123', 'vigile', 'Giulio', 'Falco', 'giulio.falco@email.it', '3201234571', 'Via Firenze 5'),
+(6, 'vigile6', '123', 'vigile', 'Eleonora', 'Della Rovere', 'eleonora.dellarovere@email.it', '3201234572', 'Via Venezia 6');
 
 -- --------------------------------------------------------
 
@@ -400,7 +406,7 @@ ALTER TABLE `utenti`
 -- AUTO_INCREMENT per la tabella `utenti`
 --
 ALTER TABLE `utenti`
-  MODIFY `idVigile` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idVigile` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

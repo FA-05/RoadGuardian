@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
     sessionStorage.removeItem("data");
+    sessionStorage.removeItem("tipo")
+
 
     $("#errorMessage").hide();
 

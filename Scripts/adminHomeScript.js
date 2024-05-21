@@ -3,6 +3,9 @@ $(document).ready(function(){
     
 
     getMultaData();
+    sessionStorage.removeItem("tipo");
+    sessionStorage.setItem("tipo", "admin");
+
 
 
     function getMultaData(){
@@ -30,14 +33,18 @@ $(document).ready(function(){
 
         data.forEach(multa => {
             $table +="<tr class='hover'>";
-            $table +="<td>"+multa["barcode"]+"</td>";
+            $table +="<td class='barcode cursor-pointer'>"+multa["barcode"]+"</td>";
             $table +="<td>"+multa["targaVeicolo"]+"</td>";
             $table +="<td>"+multa["luogo"]+"</td>";
             $table +="<td>"+multa["causaMulta"]+"</td>";
             $table +="<td>"+multa["data_ora"]+"</td>";
             $table +="<td>"+multa["importo"]+"</td>";
             $table +="<td>"+multa["scadenzaImporto"]+"</td>";
-            $table +="<td>"+multa["pagata"]+"</td>";
+            if(multa["pagata"]==1){
+                $table +="<td>SI</td>";
+            }else{
+                $table +="<td>NO</td>";
+            }
             $table +="<td>"+multa["idVigile"]+"</td>";
             $table +="</tr>";
         });
@@ -64,6 +71,44 @@ $(document).ready(function(){
             }
         });
 
+    });
+
+    $(document).on("click", ".barcode", function(){
+
+        let code=$(this).text();
+
+        //alert(code);
+        $.ajax({
+            url: "../../Backend/getCodeInfo.php",
+            method: "POST",
+            data: {code: code},
+            dataType: "json", // Assicurati di trattare la risposta come JSON
+            success: function(response){
+                if(response.error) {
+                    alert(response.error);
+                } else {
+                    //alert(JSON.stringify(response))
+                    let data=response["dati"];
+                    let tipo= response["tipo"];
+                    //alert(JSON.stringify(data));
+                    sessionStorage.setItem("data", JSON.stringify(data));
+
+                    if(tipo=="multa"){
+                        //alert("MULTA")
+                        window.location.replace("../../Pages/infoMulta.php")
+                    }else{
+                        //alert("Sinistro");
+                        //alert(JSON.stringify(data));
+                        window.location.replace("../../Pages/infoSinistro.php")
+
+                        
+                    }
+                }
+            },
+            error: function(xhr, status, error) {
+                alert("Errore: "+ error + " STATUS: "+status +" XHR: "+xhr);
+            }
+        });
     });
 
 });

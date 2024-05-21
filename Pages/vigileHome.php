@@ -18,7 +18,7 @@
     if($_SESSION["logged-in"]==false){
         header("Location: ../Home.php");
     }
-
+ 
 ?>
 
 <body>
@@ -42,7 +42,7 @@
             </div>
 
 
-            <label for="my-drawer" class="m-2 btn bg-amber-200 drawer-button">Storico Multe</label>
+            <label for="my-drawer" class="m-2 btn bg-amber-200 drawer-button">Multe e Sinistri Segnalati</label>
 
             <div class="flex flex-col gap-3 justify-center items-center md:flex-row">
                 <a href="formMulta.php">
@@ -73,10 +73,18 @@
         </div>
         <div class="drawer-side">
             <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-            <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+            <ul class="menu p-4 w-60 min-h-full bg-base-200 text-base-content">
                 <!-- Sidebar content here -->
-                <li><a>Sidebar Item 1</a></li>
-                <li><a>Sidebar Item 2</a></li>
+                <div id="Multe" class="mt-4 ">
+                    <li class="font-bold text-lg"><a>Multe</a></li>
+                </div>
+
+                
+
+                <div id="Sinistri" class="mt-4 ">
+                    <li class="font-bold text-lg"><a>Sinistri</a></li>
+                </div>
+                
 
             </ul>
         </div>

@@ -1,18 +1,39 @@
 $(document).ready(function () {
 
     var data = sessionStorage.getItem("data");
-    $("#already-pagato-btn").hide();
-    $("#conferma-alert").hide();
-    $("#paga-btn").hide();
-    $("#info-alert").hide();
+    var tipo = sessionStorage.getItem("tipo");
 
-    //alert(data);
+    //alert(tipo);
+    if(tipo=="vigile" || tipo=="admin"){
+        //alert("Vigile");
+        $("#already-pagato-btn").remove();
+        $("#conferma-alert").remove();
+        $("#paga-btn").remove();
+        $("#info-alert").remove();
+        
+
+        if(tipo=="vigile" ){
+            $('#link').attr('href', "../Pages/vigileHome.php");
+        }else{
+            $('#link').attr('href', "../Pages/AdminPages/adminHome.php");
+        }
+
+
+    }else{
+        $("#already-pagato-btn").hide();
+        $("#conferma-alert").hide();
+        $("#paga-btn").hide();
+        $("#info-alert").hide();
+    }
+
+    
+
+    //alert(data); 
 
     if (data == null) {
         window.location.replace("../home.php")
     } else {
         data = JSON.parse(data);
-        $("#barcode").text(data["barcode"]);
 
         $("#targaVeicolo").text(data["targaVeicolo"]);
         $("#luogo").text(data["luogo"]);
@@ -26,6 +47,10 @@ $(document).ready(function () {
         }else{
             $("#paga-btn").show();
         }
+
+        //alert(data["barcode"]);
+        displayBarcode(data["barcode"]);
+
 
 
     }

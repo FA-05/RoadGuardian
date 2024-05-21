@@ -39,11 +39,12 @@
         </div>
 
         <div class="flex justify-center items-center mt-7">
-        <div role="tablist" class="tabs tabs-boxed w-[400px]">
+        <div role="tablist" class="tabs tabs-boxed w-[600px]">
             <a href="adminHome.php" role="tab" class="tab ">Multe</a>
             <a href="adminSinistri.php" role="tab" class="tab ">Sinistri</a>
             <a href="adminPatentati.php" role="tab" class="tab">Patentati</a>
             <a href="adminVeicoli.php" role="tab" class="tab tab-active">Veicoli</a>
+            <a href="adminVigili.php" role="tab" class="tab">Vigili</a>
         </div>
         </div>
         

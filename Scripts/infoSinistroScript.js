@@ -3,12 +3,23 @@ $(document).ready(function () {
 
     var data = JSON.parse(sessionStorage.getItem("data"));
 
-    //alert(data);
+    
+    var tipo = sessionStorage.getItem("tipo");
 
-    $("#barcode").text(data["barcode"]);
+    if(tipo=="vigile" || tipo=="admin"){
+        
+        if(tipo=="vigile" ){
+            $('#link').attr('href', "../Pages/vigileHome.php");
+        }else{
+            $('#link').attr('href', "../Pages/AdminPages/adminHome.php");
+        }
+
+
+    }
+
     getTarghe(JSON.parse(data["targa"]));
     getCF(JSON.parse(data["CFguidatori"]));
-
+    displayBarcode(data["barcode"]);
     $("#luogo").text(data["luogo"]);
     $("#data_ora").text(data["data_ora"]);
     $("#causaIncidente").text(data["causaIncidente"]);
