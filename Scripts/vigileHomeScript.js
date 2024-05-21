@@ -28,7 +28,7 @@ $(document).ready(function(){
             dataType:"json",
             success: function(rtn){
                 if(rtn == true){
-                    alert("Logged-out");
+                    //alert("Logged-out");
                     location.reload();
                     
                 }else{

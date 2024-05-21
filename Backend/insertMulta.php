@@ -11,12 +11,13 @@
     $importo=$_POST["importo"];
 
     $Date= new DateTime();
+    $dataOggi=$Date -> format("Y-m-d H:i:s");
     $Date -> add(new DateInterval("P10D"));
     $scadenzaImporto= $Date -> format("Y-m-d");
 
 
-    $stmt= $conn -> prepare("INSERT INTO multe (barcode, targaVeicolo, luogo, causaMulta,importo,scadenzaImporto,idVigile) VALUES (?,?,?,?,?,?,?)");
-    $stmt ->bind_param ("ssssisi", $barcode,$targaVeicolo, $luogo, $causaMulta, $importo, $scadenzaImporto, $idVigile);
+    $stmt= $conn -> prepare("INSERT INTO multe (barcode, targaVeicolo, luogo, causaMulta, data_ora, importo,scadenzaImporto,idVigile) VALUES (?,?,?,?,?,?,?,?)");
+    $stmt ->bind_param ("sssssisi", $barcode,$targaVeicolo, $luogo, $causaMulta, $dataOggi,$importo, $scadenzaImporto, $idVigile);
     $stmt -> execute();
 
     if($stmt -> error){

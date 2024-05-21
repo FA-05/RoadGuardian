@@ -45,6 +45,11 @@
             </div>
 
             <div class="flex justify-between items-center py-2 mb-3">
+                <h3 class="font-semibold">data-ora</h3>
+                <p id="data_ora" class="text-gray-700"></p>
+            </div>
+
+            <div class="flex justify-between items-center py-2 mb-3">
                 <h3 class="font-semibold">Luogo</h3>
                 <p id="luogo" class="text-gray-700"></p>
             </div>
@@ -64,7 +69,7 @@
                 <p id="scadenzaImporto" class="text-gray-700"></p>
             </div>
 
-            <div class="mt-10 flex justify-center ">
+            <div class="mt-[7rem] flex justify-center ">
                 <button id="paga-btn"
                     class=" w-[200px] bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
                     PAGA

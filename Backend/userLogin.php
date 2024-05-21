@@ -16,9 +16,10 @@
         $_SESSION["logged-in"]=true;
         $_SESSION["username"]=$username;
         $_SESSION["idVigile"]=$row["idVigile"];
-        echo true;
+        $_SESSION["tipo"]=$row["tipo"];
+        echo json_encode(["login" => true, "tipo" => $_SESSION["tipo"]]);
     }else{
-        echo "credenziali sbagliate";
+        echo json_encode(["login" => false]);
     }
     
 ?>

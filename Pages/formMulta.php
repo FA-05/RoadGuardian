@@ -48,6 +48,7 @@
                 </div>
 
             </div>
+            
 
             <div class="inputContainer">
                 <p class="font-bold mb-2" for="luogo">Luogo</p>

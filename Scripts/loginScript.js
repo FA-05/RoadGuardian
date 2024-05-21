@@ -11,10 +11,18 @@ $(document).ready(function(){
             url:"../Backend/userLogin.php",
             method:"POST",
             data:{username:username, password:password},
+            dataType: "json",
             success: function(rtn){
-                if (rtn==true){
-                    window.location.replace("../Pages/vigileHome.php");
+                //alert(rtn.login);
+                if (rtn.login==true){
+                    if(rtn.tipo=="admin"){
+                        window.location.replace("../Pages/AdminPages/adminHome.php");
+                        
+                    }else{
+                        window.location.replace("../Pages/vigileHome.php");
+                    }
                 }else{
+                    //alert("hole");
                     $("#errorMessage").slideDown();
                     setTimeout(function(){
                         $("#errorMessage").slideUp();

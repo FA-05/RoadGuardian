@@ -19,7 +19,8 @@ $(document).ready(function () {
         $("#causaMulta").text(data["causaMulta"]);
         $("#importo").text(data["importo"]);
         $("#scadenzaImporto").text(data["scadenzaImporto"]);
-
+        $("#data_ora").text(data["data_ora"]);
+        
         if (data["pagata"] == 1) {
             $("#already-pagato-btn").show();
         }else{
