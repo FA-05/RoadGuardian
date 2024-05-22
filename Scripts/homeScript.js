@@ -33,7 +33,7 @@ $(document).ready(function(){
                     }else{
                         //alert("Sinistro");
                         //alert(JSON.stringify(data));
-                        window.location.replace("Pages/infoSinistro.php")
+                        window.location.replace("Pages/privacy.php")
 
                         
                     }

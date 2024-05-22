@@ -7,13 +7,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="../../assets/bootstrap-italia/dist/css/bootstrap-italia-comuni.min.css" />
-    <link href="../../assets/css/style.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../../assets/css/style.css" rel="stylesheet" />
+    
     <title>Admin</title>
 </head>
 
 <?PHP
 session_start();
+
 
 if ($_SESSION["logged-in"] == true && $_SESSION["tipo"] == "admin") {
 
@@ -25,12 +27,12 @@ if ($_SESSION["logged-in"] == true && $_SESSION["tipo"] == "admin") {
 
 <body class="bg-black-100 font-sans">
 
-<nav>
+<header>
      <?PHP
     include ("../navbarAdmin.php")
         ?>
         
-</nav>
+</header>
 
     <div class="mx-4">
 

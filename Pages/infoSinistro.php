@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="../assets/bootstrap-italia/dist/css/bootstrap-italia-comuni.min.css" />
   <link href="../assets/css/style.css" rel="stylesheet" />
 </head>
@@ -20,7 +20,7 @@
   <header>
     <?PHP
     include ("../Pages/navbar.php")
-        ?>
+      ?>
   </header>
   <main>
     <div class="container" id="main-container">
@@ -134,7 +134,7 @@
                           </div>
                           <div id="collapse-benef-1" class="accordion-collapse collapse" role="region">
                             <div class="accordion-body p-0">
-                            <div class="cmp-info-summary bg-white has-border">
+                              <div class="cmp-info-summary bg-white has-border">
                                 <div class="card">
                                   <div
                                     class="card-header border-bottom border-light p-0 mb-0 d-flex justify-content-between d-flex justify-content-end">
@@ -227,7 +227,7 @@
 
                                   <div class="card-body p-0">
                                     <div class="single-line-info border-light">
-                                      <div class="text-paragraph-small">Data e ora</div>
+                                      <div class="text-paragraph-small">Codice Fiscale</div>
                                       <div id="cfGuidatori" class="border-light border-0 data-text">
                                         <p class="data-text"></p>
                                       </div>
@@ -255,17 +255,7 @@
                     <span class="text-button-sm t-primary">Indietro</span>
                   </button>
                 </a>
-                <button type="button"
-                  class="btn btn-outline-primary bg-white btn-sm steppers-btn-save d-none d-lg-block saveBtn"
-                  id="save-request">
-                  <span class="text-button-sm t-primary">Salva Richiesta</span>
-                </button>
 
-                <button type="button"
-                  class="btn btn-outline-primary bg-white btn-sm steppers-btn-save d-block d-lg-none saveBtn center"
-                  id="save-request">
-                  <span class="text-button-sm t-primary">Salva</span>
-                </button>
                 <button id="forward-button" type="button" class="btn btn-primary btn-sm steppers-btn-confirm">
                   <span class="text-button-sm">Avanti</span>
                   <svg class="icon icon-white icon-sm" aria-hidden="true">
@@ -273,24 +263,20 @@
                   </svg>
                 </button>
               </nav>
-              <div id="alert-message" class="alert alert-success cmp-disclaimer rounded d-none" role="alert">
-                <span class="d-inline-block text-uppercase cmp-disclaimer__message">Richiesta salvata con
-                  successo</span>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  <script>
-    window.__PUBLIC_PATH__ = '../assets/bootstrap-italia/dist/fonts';
-  </script>
-  <script src="../assets/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js"></script>
-  <script src="../assets/script/scripts.js"></script>
-  <script src="../assets/script/store.js"></script>
-  <script src="../assets/script/pages/general.js"></script>
-  <script>
-    $(document).ready(function () {
+    <script>
+      window.__PUBLIC_PATH__ = '../assets/bootstrap-italia/dist/fonts';
+    </script>
+    <script src="../assets/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js"></script>
+    <script src="../assets/script/scripts.js"></script>
+    <script src="../assets/script/store.js"></script>
+    <script src="../assets/script/pages/general.js"></script>
+    <script>
+      $(document).ready(function () {
 
 
         var data = JSON.parse(sessionStorage.getItem("data"));
@@ -309,28 +295,28 @@
         //$("#causaIncidente").text(data["causaIncidente"]);
 
         function getCF(cf_list) {
-            let rtn = "";
+          let rtn = "";
 
-            cf_list.forEach(cf => {
-                rtn += "<p>" + cf + "</p>";
-            });
+          cf_list.forEach(cf => {
+            rtn += "<p>" + cf + "</p>";
+          });
 
-            $("#cfGuidatori").append(rtn);
+          $("#cfGuidatori").append(rtn);
         }
 
         function getTarghe(targa_list) {
-            let rtn = "";
+          let rtn = "";
 
-            targa_list.forEach(targa => {
-                rtn += "<p>" + targa + "</p>";
-            });
+          targa_list.forEach(targa => {
+            rtn += "<p>" + targa + "</p>";
+          });
 
-            $("#targa").append(rtn);
+          $("#targa").append(rtn);
         }
 
 
-    });
-</script>
+      });
+    </script>
 </body>
 
 </html>

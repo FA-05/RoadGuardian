@@ -23,7 +23,7 @@
                         <use xlink:href="../../assets/bootstrap-italia/dist/svg/sprites.svg#it-user"></use>
                       </svg>
                     </span>
-                    <span class="d-none d-lg-block"><?php echo $_SESSION['username']; ?> - Disconnetti</span>
+                    <span class="d-none d-lg-block">Disconnetti</span>
                   </a>
                   <?php
                 } else {

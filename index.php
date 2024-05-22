@@ -41,15 +41,20 @@
                 if (isset($_SESSION['username']) && $_SESSION['username'] != '') {
                   ?>
                   <!-- Mostra il nome utente e il link per disconnettersi -->
-                  <a href="PHPs/logout.php" class="btn btn-primary btn-icon btn-full" href="#"
+                  <a href="Pages/AdminPages/adminPatentati.php" class="btn btn-primary btn-icon btn-full" href="#"
                     data-element="personal-area-login">
                     <span class="rounded-icon" aria-hidden="true">
                       <svg class="icon icon-primary">
                         <use xlink:href="assets/bootstrap-italia/dist/svg/sprites.svg#it-user"></use>
                       </svg>
                     </span>
-                    <span class="d-none d-lg-block"><?php echo $_SESSION['username']; ?> - Disconnetti</span>
+                    <span class="d-none d-lg-block"><?php echo $_SESSION['username']; ?></span>
                   </a>
+                  <a href="PHPs/logout.php" class="btn btn-primary btn-icon btn-full" href="#"
+                    data-element="personal-area-login">
+                    <span class="d-none d-lg-block">Disconnetti</span>
+                  </a>
+      
                   <?php
                 } else {
                   ?>
