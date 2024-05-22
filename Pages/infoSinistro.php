@@ -247,7 +247,7 @@
             </div>
             <div class="cmp-nav-steps">
               <nav class="steppers-nav">
-                <a href="privacy.html">
+                <a href="privacy.php">
                   <button type="button" class="btn btn-sm steppers-btn-prev p-0">
                     <svg class="icon icon-primary icon-sm" aria-hidden="true">
                       <use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-chevron-left"></use>

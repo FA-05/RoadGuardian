@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   forwardButton.addEventListener("click", (event) => {
     const isValid = privacyCheckbox.checked;
     if (isValid) {
-      window.location.href = window.location.href.replace("privacy", "general");
+      window.location.href = window.location.href.replace("privacy", "infoSinistro");
     } else {
       privacyCheckbox.classList.add("is-invalid");
       privacyError.classList.remove("d-none");
