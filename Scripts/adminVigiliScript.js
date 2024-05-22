@@ -36,7 +36,7 @@ $(document).ready(function(){
             $table +="<tr class='hover'>";
             $table +="<td>"+veicolo["idVigile"]+"</td>";
             $table +="<td>"+veicolo["nome"]+"</td>";
-            $table +="<td>"+veicolo["cogome"]+"</td>";
+            $table +="<td>"+veicolo["cognome"]+"</td>";
             $table +="<td>"+veicolo["email"]+"</td>"; 
             $table +="<td>"+veicolo["telefono"]+"</td>";  
             $table +="<td>"+veicolo["indirizzo"]+"</td>";             
