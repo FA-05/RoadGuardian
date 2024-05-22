@@ -260,20 +260,11 @@
                               </a>
                             </li>
                             <li>
-                              <a class="list-item" href="#costs">
-                                <span class="title-medium">Costi</span>
-                              </a>
-                            </li>
-                            <li>
                               <a class="list-item" href="#service-access">
                                 <span class="title-medium">Accedi al servizio</span>
                               </a>
                             </li>
-                            <li>
-                              <a class="list-item" href="#conditions">
-                                <span class="title-medium">Condizioni di servizio</span>
-                              </a>
-                            </li>
+                            
                             <li>
                               <a class="list-item" href="#contacts">
                                 <span class="title-medium">Contatti</span>

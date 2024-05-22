@@ -105,7 +105,7 @@ if ($_SESSION["logged-in"] == true && $_SESSION["tipo"] == "admin") {
                 $table += "<td>" + patentato["CF"] + "</td>";
                 $table += "<td>" + patentato["nome"] + "</td>";
                 $table += "<td>" + patentato["cognome"] + "</td>";
-                $table += "<td>" + patentato["nmeroPatente"] + "</td>";
+                $table += "<td>" + patentato["numeroPatente"] + "</td>";
                 $table += "<td>" + patentato["puntiPatente"] + "</td>";
                 $table += "<td>" + patentato["indirizzo"] + "</td>";
                 $table += "<td>" + patentato["email"] + "</td>";
@@ -117,27 +117,6 @@ if ($_SESSION["logged-in"] == true && $_SESSION["tipo"] == "admin") {
 
             $("#Table").append($table);
         }
-
-        $(document).on("click", "#btn-log-out", function () {
-
-            $.ajax({
-                url: "../../PHPs/logout.php",
-                cache: false,
-                dataType: "json",
-                success: function (rtn) {
-                    if (rtn == true) {
-                        alert("Logged-out");
-                        window.location.href = "../../index.php";
-
-                    } else {
-                        alert("Errore: " + rtn);
-                    }
-
-                }
-            });
-
-        });
-
     });
 </script>
 

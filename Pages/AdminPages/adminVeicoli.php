@@ -102,27 +102,6 @@ if (!($_SESSION["logged-in"] == true && $_SESSION["tipo"] == "admin")) {
             $("#Table").append($table);
         }
 
-
-        $(document).on("click", "#btn-log-out", function () {
-
-            $.ajax({
-                url: "../../PHPs/log-out.php",
-                cache: false,
-                dataType: "json",
-                success: function (rtn) {
-                    if (rtn == true) {
-                        //alert("Logged-out");
-                        location.reload();
-
-                    } else {
-                        alert("Errore: " + rtn);
-                    }
-
-                }
-            });
-
-        });
-
     });
 </script>
 

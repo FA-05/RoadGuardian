@@ -54,7 +54,7 @@
             <div class="col-12">
               <div class="it-header-center-content-wrapper">
                 <div class="it-brand-wrapper">
-                  <a href="#" title="Vai alla homepage" aria-label="Home Il tuo Comune">
+                  <a href="../../index.php" title="Vai alla homepage" aria-label="Home Il tuo Comune">
                     <svg class="icon" aria-hidden="true">
                       <image xlink:href="../../assets/Icons/logo.png" src="../../assets/Icons/logo.png" alt="Il tuo Comune"
                         role="img" width="82" height="82"></image>
