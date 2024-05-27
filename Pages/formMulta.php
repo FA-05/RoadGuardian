@@ -25,9 +25,9 @@
 
 <body id="page">
     <div class="mx-4 sm:mx-16 mb-4">
-        <div class="navbar bg-base-100 rounded-lg mt-4 bg-amber-300 flex justify-center items-center gap-1">
+        <div class="navbar bg-base-100 rounded-lg mt-4 bg-amber-300 flex justify-center items-center gap-1 ">
 
-            <img class="ml-4 h-14 w-14" src="../icons/logo.png" alt="">
+            <img class="ml-4 h-14 w-14" src="../Icons/logo.png" alt="">
             <a href="vigileHome.php" class="hidden sm:inline text-xl font-bold">Road Guardian</a>
 
         </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3308
--- Creato il: Mag 21, 2024 alle 21:51
+-- Creato il: Mag 27, 2024 alle 19:53
 -- Versione del server: 10.4.32-MariaDB
 -- Versione PHP: 8.1.25
 
@@ -256,27 +256,28 @@ INSERT INTO `sinistri` (`barcode`, `targa`, `data_ora`, `luogo`, `numeroFeriti`,
 CREATE TABLE `utenti` (
   `idVigile` int(255) NOT NULL,
   `username` char(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
+  `password` varchar(1000) NOT NULL,
   `tipo` varchar(50) NOT NULL,
   `nome` varchar(50) NOT NULL,
   `cognome` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `telefono` varchar(50) NOT NULL,
-  `indirizzo` varchar(50) NOT NULL
+  `indirizzo` varchar(50) NOT NULL,
+  `salt` varchar(1000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dump dei dati per la tabella `utenti`
 --
 
-INSERT INTO `utenti` (`idVigile`, `username`, `password`, `tipo`, `nome`, `cognome`, `email`, `telefono`, `indirizzo`) VALUES
-(0, 'admin', 'admin', 'admin', 'admin', 'admin', 'admin', 'admin', 'admin'),
-(1, 'vigile1', '123', 'vigile', 'Cosimo', 'De Conti', 'cosimo.deconti@email.it', '3201234567', 'Via Roma 1'),
-(2, 'vigile2', '123', 'vigile', 'Ludovica', 'Principato', 'ludovica.principato@email.it', '3201234568', 'Via Milano 2'),
-(3, 'vigile3', '123', 'vigile', 'Taddeo', 'Benevento', 'taddeo.benevento@email.it', '3201234569', 'Via Napoli 3'),
-(4, 'vigile4', '123', 'vigile', 'Serena', 'Altimari', 'serena.altimari@email.it', '3201234570', 'Via Torino 4'),
-(5, 'vigile5', '123', 'vigile', 'Giulio', 'Falco', 'giulio.falco@email.it', '3201234571', 'Via Firenze 5'),
-(6, 'vigile6', '123', 'vigile', 'Eleonora', 'Della Rovere', 'eleonora.dellarovere@email.it', '3201234572', 'Via Venezia 6');
+INSERT INTO `utenti` (`idVigile`, `username`, `password`, `tipo`, `nome`, `cognome`, `email`, `telefono`, `indirizzo`, `salt`) VALUES
+(0, 'admin', '9447aff6cff8965c06070e448f1ad398f14cc1647d7706777f0bd6dda58f6175', 'admin', 'admin', 'admin', 'admin', 'admin', 'admin', '2ed3e4b904542e19'),
+(1, 'vigile1', '181c8475620e3d061498945a9265559cc2b38ec8c4d88f24e4dfe3e5cec56bc7', 'vigile', 'Cosimo', 'De Conti', 'cosimo.deconti@email.it', '3201234567', 'Via Roma 1', '9f7b614c345206bf'),
+(2, 'vigile2', 'adaccabc0daf7aabb8e64f29b3e4064beae8087f1bf74fc4ce0b5157b8f9b107', 'vigile', 'Ludovica', 'Principato', 'ludovica.principato@email.it', '3201234568', 'Via Milano 2', 'f9492bf50417aab9'),
+(3, 'vigile3', '845fb88c1072f28d388d86e43c9277c572f3e1e86807510d7e4c89512cc2adcf', 'vigile', 'Taddeo', 'Benevento', 'taddeo.benevento@email.it', '3201234569', 'Via Napoli 3', 'c833cab9e98f4e2b'),
+(4, 'vigile4', 'ce2e33f74f1907d2406202b8d640845d9e9ae59d2444c625f42dfda243689994', 'vigile', 'Serena', 'Altimari', 'serena.altimari@email.it', '3201234570', 'Via Torino 4', '7ecc296a802988f4'),
+(5, 'vigile5', '62d84563b7c9714c6719857a2913f4c6dfb2ce22497a1348bd078826f10ecf8b', 'vigile', 'Giulio', 'Falco', 'giulio.falco@email.it', '3201234571', 'Via Firenze 5', 'cd8955a5575330e1'),
+(6, 'vigile6', '00351d9398852ffe062ed197db10918d0f700720fffc12158a758eea005408f4', 'vigile', 'Eleonora', 'Della Rovere', 'eleonora.dellarovere@email.it', '3201234572', 'Via Venezia 6', '8d19d3fb80a8a7fe');
 
 -- --------------------------------------------------------
 

@@ -24,9 +24,9 @@
 
 <body id="page">
     <div class="mx-4 sm:mx-16 mb-4">
-        <div class="navbar bg-base-100 rounded-lg mt-4 bg-amber-300 flex justify-center items-center gap-1">
+        <div class="navbar bg-base-100 rounded-lg mt-4 bg-amber-300 flex justify-center items-center gap-1 ">
 
-            <img class="ml-4 h-14 w-14" src="../icons/logo.png" alt="">
+            <img class="ml-4 h-14 w-14" src="../Icons/logo.png" alt="">
             <a href="vigileHome.php" class="hidden sm:inline text-xl font-bold">Road Guardian</a>
 
         </div>
@@ -45,22 +45,23 @@
                     </div>
 
                     <div id="infoGuidatore" class="grid gap-2">
-                        <div id="default-info" class="grid grid-cols-2 gap-2">
-                            <input data-id="1" placeholder="1° Targa" id="targa-1"
-                                class="targaVeicolo  px-4 w-[300px] h-[40px] rounded-md focus:outline-blue-400"
-                                type="text">
-                            <div id="opzioni-targa-div-1" class=" bg-slate-200 absolute z-10 mt-10">
+    <div id="default-info" class="grid grid-cols-2 gap-2 relative">
+        <input data-id="1" placeholder="1° Targa" id="targa-1"
+            class="targaVeicolo px-4 w-[300px] h-[40px] rounded-md focus:outline-blue-400"
+            type="text">
+        <div id="opzioni-targa-div-1" class="bg-slate-200 absolute z-10 mt-10">
+        </div>
+        <div class="relative flex items-center">
+            <input data-id="1" placeholder="1° CF" id="CF-1"
+                class="cfGuidatore px-4 w-[300px] h-[40px] rounded-md focus:outline-blue-400"
+                type="text">
+            <button type="button" class="ml-2 px-2 py-1 bg-red-500 text-white rounded-md">X</button>
+        </div>
+        <div id="opzioni-CF-div-1" class="bg-slate-200 absolute z-10 mt-10 ml-[19.2rem]">
+        </div>
+    </div>
+</div>
 
-                            </div>
-                            <input data-id="1" placeholder="1° CF" id="CF-1"
-                                class="cfGuidatore px-4 w-[300px] h-[40px] rounded-md focus:outline-blue-400"
-                                type="text">
-                            <div id="opzioni-CF-div-1" class=" bg-slate-200 absolute z-10 mt-10 ml-[19.2rem]">
-
-                            </div>
-                        </div>
-
-                    </div>
 
                     <button id="btn-add" type="button"
                         class="btn btn-sm border border-none bg-green-300 w-full mt-2">+</button>

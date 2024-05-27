@@ -4,8 +4,42 @@ $(document).ready(function(){
 
     getMultaData();
     
+
+
     sessionStorage.removeItem("tipo");
     sessionStorage.setItem("tipo", "admin");
+
+
+    getMultaData();
+    sessionStorage.removeItem("tipo");
+    sessionStorage.setItem("tipo", "admin");
+
+    document.getElementById('searchInput').addEventListener('keyup', function () {
+        var input = this.value.toLowerCase(); // Ottieni il testo di ricerca in minuscolo
+        var rows = document.querySelectorAll("#Table tr"); // Ottieni tutte le righe della tabella
+
+        // Itera su ogni riga della tabella
+        rows.forEach(function (row) {
+            var cells = row.getElementsByTagName("td"); // Ottieni le celle della riga
+
+            // Controlla se una delle celle contiene il testo di ricerca
+            var found = false;
+            for (var i = 0; i < cells.length; i++) {
+                var cell = cells[i];
+                if (cell.textContent.toLowerCase().indexOf(input) > -1) {
+                    found = true;
+                    break;
+                }
+            }
+
+            // Mostra o nascondi la riga in base al risultato della ricerca
+            if (found) {
+                row.style.display = ""; // Mostra la riga
+            } else {
+                row.style.display = "none"; // Nascondi la riga
+            }
+        });
+            });
 
 
 
