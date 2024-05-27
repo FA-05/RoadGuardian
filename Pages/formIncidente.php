@@ -18,7 +18,7 @@
 <?php
     session_start();
     if($_SESSION["logged-in"]==false){
-        header("Location: ../Home.php");
+        header("Location: ../home.php");
     }
 ?>
 
@@ -55,7 +55,7 @@
             <input data-id="1" placeholder="1° CF" id="CF-1"
                 class="cfGuidatore px-4 w-[300px] h-[40px] rounded-md focus:outline-blue-400"
                 type="text">
-            <button type="button" class="ml-2 px-2 py-1 bg-red-500 text-white rounded-md">X</button>
+            <!-- <button type="button" class="ml-2 px-2 py-1 bg-red-500 text-white rounded-md">X</button> -->
         </div>
         <div id="opzioni-CF-div-1" class="bg-slate-200 absolute z-10 mt-10 ml-[19.2rem]">
         </div>

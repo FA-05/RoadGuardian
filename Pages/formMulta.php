@@ -18,7 +18,7 @@
 <?PHP
     session_start();
     if($_SESSION["logged-in"]==false){
-        header("Location: ../Home.php");
+        header("Location: ../home.php");
     }
 
 ?>

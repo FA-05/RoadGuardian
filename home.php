@@ -36,7 +36,7 @@
                     <li><a href="#FAQ">FAQ</a></li>
                 </ul>
             </div>
-            <img class="ml-4 h-14 w-14" src="icons/logo.png" alt="">
+            <img class="ml-4 h-14 w-14" src="Icons/logo.png" alt="">
             <a class="hidden sm:inline text-xl font-bold">Road Guardian</a>
         </div>
         <div class="navbar-center hidden lg:flex">
