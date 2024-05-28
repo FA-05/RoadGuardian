@@ -10,9 +10,11 @@
 
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="../assets/bootstrap-italia/dist/css/bootstrap-italia-comuni.min.css" />
+  <script src="../Scripts/genbar.js"></script>
   <link href="../assets/css/style.css" rel="stylesheet" />
 </head>
 
@@ -72,24 +74,12 @@
                 <span class="d-block h-100 title-medium text-uppercase">Dati generali</span>
               </div>
             </div>
-            <!-- Desktop -->
-            <div class="info-progress-wrapper d-none d-lg-flex w-100 px-3 flex-column justify-content-end">
-              <div class="info-progress-body d-flex justify-content-between align-self-end align-items-end w-100 py-3">
-                <span class="d-block h-100 title-medium text-uppercase">Dati specifici del servizio</span>
-              </div>
-            </div>
-            <!-- Desktop -->
-            <div class="info-progress-wrapper d-none d-lg-flex w-100 px-3 flex-column justify-content-end">
-              <div class="info-progress-body d-flex justify-content-between align-self-end align-items-end w-100 py-3">
-                <span class="d-block h-100 title-medium text-uppercase">Riepilogo</span>
-              </div>
-            </div>
 
             <!-- Mobile -->
             <div class="iscrizioni-header d-lg-none w-100">
               <h4 class="step-title d-flex align-items-center justify-content-between drop-shadow">
                 <span class="d-block d-lg-inline"> Dati generali </span>
-                <span class="step">2/4</span>
+                <span class="step">2/2</span>
               </h4>
               <p class="title-xsmall mt-40 mb-3">I campi contraddistinti dal simbolo asterisco sono obbligatori</p>
             </div>
@@ -117,7 +107,7 @@
                         <h3 class="big-title mb-0">SINISTRO</h3>
                         <p class="card-info">
                           BARCODE<br />
-                          <span id="barcode"></span>
+                          <svg id="barcode"></svg>
                         </p>
 
                         <div class="accordion-item">
@@ -286,7 +276,7 @@
         $("#barcode").text(data["barcode"]);
         getTarghe(JSON.parse(data["targa"]));
         getCF(JSON.parse(data["CFguidatori"]));
-
+        displayBarcode(data["barcode"]);
         $("#luogo").text(data["luogo"]);
         $("#data_ora").text(data["data_ora"]);
         $("#causaIncidente").text(data["causaIncidente"]);

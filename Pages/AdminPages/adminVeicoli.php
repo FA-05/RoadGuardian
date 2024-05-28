@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="../../assets/bootstrap-italia/dist/css/bootstrap-italia-comuni.min.css" />
     <link href="../../assets/css/style.css" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    
     <title>Admin</title>
 </head>
 
@@ -21,7 +22,7 @@ if (!($_SESSION["logged-in"] == true && $_SESSION["tipo"] == "admin")) {
 
 ?>
 
-<body class="bg-black-100 font-sans">
+<body>
 
 <nav>
      <?PHP
@@ -104,5 +105,12 @@ if (!($_SESSION["logged-in"] == true && $_SESSION["tipo"] == "admin")) {
 
     });
 </script>
+<script>
+    window.__PUBLIC_PATH__ = '../../assets/bootstrap-italia/dist/fonts';
+  </script>
+  <script src="../../assets/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="../../assets/script/scripts.js"></script>
+  <script src="../../assets/script/store.js"></script>
+  <script src="../../assets/script/pages/privacy.js"></script>
 
 </html>

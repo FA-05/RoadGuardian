@@ -324,7 +324,7 @@ if ($_SESSION["logged-in"] == false) {
                     success: function (rtn) {
                         if (rtn == true) {
                             sessionStorage.setItem("messaggioSinistro", "true");
-                            window.location.replace("vigileHome.php");
+                            window.location.replace("..index.php");
                             //alert("Modifiche avvenute con successo :" +rtn)
                         } else {
                             alert("Errore durante la modifica: " + rtn);

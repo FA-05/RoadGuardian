@@ -12,13 +12,13 @@
     <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 
-<body class="bg-gray-100 font-sans">
-<nav>
-    <?PHP
-    include ("../Pages/navbar.php")
-        ?>
-        
-</nav>
+<body>
+    <nav>
+        <?PHP
+        include ("../Pages/navbar.php")
+            ?>
+
+    </nav>
 
     <div class=" flex items-center justify-center h-screen pb-20">
         <div class="bg-gray-100 p-12 rounded-lg shadow-md w-full max-w-md">
@@ -38,7 +38,8 @@
                     class="btn btn-primary w-full py-2 px-4 bg-indigo-500 hover:bg-indigo-600 text-white font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Login</button>
             </form>
             <br>
-            <p class="text-center text-gray-600">Annulla e <a href="../index.php" class="text-indigo-500 hover:text-indigo-600">torna alla pagina principale</a></p>
+            <p class="text-center text-gray-600">Annulla e <a href="../index.php"
+                    class="text-indigo-500 hover:text-indigo-600">torna alla pagina principale</a></p>
         </div>
     </div>
 
@@ -62,6 +63,13 @@
 
 </body>
 
+<script>
+    window.__PUBLIC_PATH__ = '../assets/bootstrap-italia/dist/fonts';
+</script>
+<script src="../assets/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js"></script>
+<script src="../assets/script/scripts.js"></script>
+<script src="../assets/script/store.js"></script>
+<script src="../assets/script/pages/privacy.js"></script>
 <script>
     $(document).ready(function () {
         $("#errorMessage").hide();

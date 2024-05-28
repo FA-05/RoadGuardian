@@ -23,7 +23,7 @@ if ($_SESSION["logged-in"] == true && $_SESSION["tipo"] == "admin") {
 
 ?>
 
-<body class="bg-black-100 font-sans">
+<body>
 
 <nav>
      <?PHP
@@ -65,6 +65,7 @@ if ($_SESSION["logged-in"] == true && $_SESSION["tipo"] == "admin") {
 
 
 </body>
+
 
 <script>
 
@@ -121,5 +122,12 @@ if ($_SESSION["logged-in"] == true && $_SESSION["tipo"] == "admin") {
       
     });
 </script>
+<script>
+    window.__PUBLIC_PATH__ = '../../assets/bootstrap-italia/dist/fonts';
+  </script>
+  <script src="../../assets/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="../../assets/script/scripts.js"></script>
+  <script src="../../assets/script/store.js"></script>
+  <script src="../../assets/script/pages/privacy.js"></script>
 
 </html>

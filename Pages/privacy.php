@@ -58,24 +58,12 @@
                 <span class="d-block h-100 title-medium text-uppercase">Dati generali</span>
               </div>
             </div>
-            <!-- Desktop -->
-            <div class="info-progress-wrapper d-none d-lg-flex w-100 px-3 flex-column justify-content-end">
-              <div class="info-progress-body d-flex justify-content-between align-self-end align-items-end w-100 py-3">
-                <span class="d-block h-100 title-medium text-uppercase">Dati specifici del servizio</span>
-              </div>
-            </div>
-            <!-- Desktop -->
-            <div class="info-progress-wrapper d-none d-lg-flex w-100 px-3 flex-column justify-content-end">
-              <div class="info-progress-body d-flex justify-content-between align-self-end align-items-end w-100 py-3">
-                <span class="d-block h-100 title-medium text-uppercase">Riepilogo</span>
-              </div>
-            </div>
 
             <!-- Mobile -->
             <div class="iscrizioni-header d-lg-none w-100">
               <h4 class="step-title d-flex align-items-center justify-content-between drop-shadow">
                 <span class="d-block d-lg-inline"> Informativa sulla privacy </span>
-                <span class="step">1/4</span>
+                <span class="step">1/2</span>
               </h4>
             </div>
           </div>
