@@ -318,7 +318,7 @@ if ($_SESSION["logged-in"] == false) {
                         },
                         success: function (rtn) {
                             if (rtn == true) {
-                                 alert("Inserimento avvenuto con successo");
+                                 //alert("Inserimento avvenuto con successo");
                                 window.location.replace("formGuidatori.php");
                             } else {
                                 alert("Errore durante l'inseriment del sinistro: " + rtn);
