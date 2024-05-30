@@ -72,19 +72,6 @@
                 }
                 ?>
               </div>
-
-              <!-- <div class="it-header-slim-right-zone" role="navigation">
-                <a href="Pages/loginPage.php" class="btn btn-primary btn-icon btn-full" href="#"
-                  data-element="personal-area-login">
-                  <span class="rounded-icon" aria-hidden="true">
-                    <svg class="icon icon-primary">
-                      <use xlink:href="assets/bootstrap-italia/dist/svg/sprites.svg#it-user"></use>
-                    </svg>
-                  </span>
-                  <span class="d-none d-lg-block">Devi inserire una multa? Accedi qui</span>
-
-                </a>
-              </div> -->
             </div>
           </div>
         </div>

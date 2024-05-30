@@ -15,17 +15,17 @@
 </head>
 
 <body>
-<header>
+  <header>
     <?PHP
     include ("../Pages/navbar.php")
-        ?>
-</header>       
+      ?>
+  </header>
 
   <main>
     <div class="container" id="main-container">
       <div class="row justify-content-center">
-        <div class="col-12 col-lg-10">
-        <div class="cmp-breadcrumbs" role="navigation">
+      <div class="col-12 col-lg-10">
+          <div class="cmp-breadcrumbs" role="navigation">
             <nav class="breadcrumb-container">
               <ol class="breadcrumb p-0" data-element="breadcrumb">
                 <li class="breadcrumb-item"><a href="../index.php">Home</a></li>
@@ -42,7 +42,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-10">
-          <h1 class="title-xxxlarge mb-4">Pagamento multa</h1>
+          <h1 class="title-xxxlarge mb-4">Informativa sulla Privacy</h1>
         </div>
         <div class="col-12">
           <div class="cmp-info-progress d-flex" data-progress="">
@@ -112,44 +112,44 @@
     $(document).ready(function () {
 
 
-        var data = JSON.parse(sessionStorage.getItem("data"));
+      var data = JSON.parse(sessionStorage.getItem("data"));
 
-        //alert(data);
+      //alert(data);
 
-        $("#barcode").text(data["barcode"]);
-        getTarghe(JSON.parse(data["targa"]));
-        getCF(JSON.parse(data["CFguidatori"]));
+      $("#barcode").text(data["barcode"]);
+      getTarghe(JSON.parse(data["targa"]));
+      getCF(JSON.parse(data["CFguidatori"]));
 
-        $("#luogo").text(data["luogo"]);
-        $("#data_ora").text(data["data_ora"]);
-        $("#causaIncidente").text(data["causaIncidente"]);
-        $("#numeroMorti").text(data["numeroMorti"]);
-        $("#numeroFeriti").text(data["numeroFeriti"]);
-        //$("#causaIncidente").text(data["causaIncidente"]);
+      $("#luogo").text(data["luogo"]);
+      $("#data_ora").text(data["data_ora"]);
+      $("#causaIncidente").text(data["causaIncidente"]);
+      $("#numeroMorti").text(data["numeroMorti"]);
+      $("#numeroFeriti").text(data["numeroFeriti"]);
+      //$("#causaIncidente").text(data["causaIncidente"]);
 
-        function getCF(cf_list) {
-            let rtn = "";
+      function getCF(cf_list) {
+        let rtn = "";
 
-            cf_list.forEach(cf => {
-                rtn += "<p>" + cf + "</p>";
-            });
+        cf_list.forEach(cf => {
+          rtn += "<p>" + cf + "</p>";
+        });
 
-            $("#cfGuidatori").append(rtn);
-        }
+        $("#cfGuidatori").append(rtn);
+      }
 
-        function getTarghe(targa_list) {
-            let rtn = "";
+      function getTarghe(targa_list) {
+        let rtn = "";
 
-            targa_list.forEach(targa => {
-                rtn += "<p>" + targa + "</p>";
-            });
+        targa_list.forEach(targa => {
+          rtn += "<p>" + targa + "</p>";
+        });
 
-            $("#targa").append(rtn);
-        }
+        $("#targa").append(rtn);
+      }
 
 
     });
-</script>
+  </script>
 </body>
 
 </html>

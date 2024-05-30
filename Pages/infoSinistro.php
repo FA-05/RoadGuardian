@@ -43,7 +43,7 @@
             </nav>
           </div>
           <div class="cmp-heading pb-3 pb-lg-4">
-            <h1 class="title-xxxlarge">Pagamento multa</h1>
+            <h1 class="title-xxxlarge">Informazioni sul Sinistro</h1>
 
             <p class="subtitle-small">
               Inserisci le informazioni necessarie per il pagamento della multa.<br class="d-none d-md-block" />

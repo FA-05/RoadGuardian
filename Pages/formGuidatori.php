@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="assets/bootstrap-italia/dist/css/bootstrap-italia-comuni.min.css" />
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/bootstrap-italia/dist/css/bootstrap-italia-comuni.min.css" />
+    <link href="../assets/css/style.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Driver Information</title>
+    <title>Informazioni Guidatore</title>
 </head>
 
 <?PHP
@@ -24,67 +24,178 @@ if ($_SESSION["logged-in"] == false) {
 
 <body>
 
-    <div class="mx-4 sm:mx-16 mb-4">
-        <div class="navbar bg-base-100 rounded-lg mt-4 bg-amber-300 flex justify-center items-center gap-1">
-
-            <img class="ml-4 h-14 w-14" src="../assets/Icons/logo.png" alt="">
-            <a href="vigileHome.php" class="hidden sm:inline text-xl font-bold">Road Guardian</a>
-
-        </div>
-    </div>
-
-
-    <div class="flex flex-col items-center justify-center mt-20 h-120">
-        <div class="relative bg-gray-100 rounded-lg shadow-xl w-full max-w-4xl p-10 mb-4">
-            <button id="ritira-btn" type="button"
-                class="absolute top-4 right-4 bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-600 transition duration-300 ease-in-out">Ritira
-                Patente</button>
-            <p id="nomeCognome" class="font-bold text-3xl mb-4 text-center"></p>
-
-            <div class="grid grid-cols-3 gap-6">
-                <div>
-                    <div class="grid grid-cols-2 items-center mb-4 w-max">
-                        <p class="font-semibold text-lg mr-2">Numero Patente:</p>
-                        <p id="numeroPatente"></p>
-                    </div>
-
-                    <div class="grid grid-cols-2 items-center mb-4">
-                        <p class="font-semibold text-lg">Punti Patente:</p>
-                        <p id="puntiPatente"></p>
-                    </div>
-
-                    <div class="mb-6">
-                        <label for="remove-points" class="font-semibold text-lg">Togli punti:</label>
-                        <input value="0" id="remove-points" type="number" min="0" max="15"
-                            class="input input-bordered w-full max-w-[6rem]">
-                    </div>
+    <header>
+        <?php include ("../Pages/navbar.php"); ?>
+    </header>
+    <div class="container" id="main-container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <div class="cmp-breadcrumbs" role="navigation">
+                    <nav class="breadcrumb-container">
+                        <ol class="breadcrumb p-0" data-element="breadcrumb">
+                            <li class="breadcrumb-item"><a href="../index.php">Home</a></li>
+                            <li class="breadcrumb-item">
+                                <span class="separator">/</span>
+                                <a href="formIncidente.php">Inserimento Sinistro</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                <span class="separator">/</span>Applicazione Penalità
+                        </ol>
+                    </nav>
                 </div>
-
-                <div class="flex justify-center items-center">
-                    <div class="h-full w-0.5 bg-gray-300"></div>
+                <div class="cmp-heading pb-3 pb-lg-4">
+                    <h1 class="title-xxxlarge">Applicazione Penalità</h1>
+                    <p class="subtitle-small">
+                        Hai bisogno di assistenza?
+                        <a href="" class="title-small-semi-bold t-primary">Contattaci</a>
+                    </p>
                 </div>
+            </div>
+            <div class="col-12">
+                <div class="cmp-info-progress d-flex" data-progress="">
+                    <!-- Desktop -->
+                    <div
+                        class="info-progress-wrapper d-none d-lg-flex w-100 px-3 flex-column justify-content-end completed">
+                        <div
+                            class="info-progress-body d-flex justify-content-between align-self-end align-items-end w-100 py-3">
+                            <span class="d-block h-100 title-medium text-uppercase">Inserimento Sinistro</span>
 
-                <div>
-                    <div id="sinistri" class="mb-4">
-                        <p class="font-semibold text-lg mb-1">Sinistri Precedenti:</p>
+                            <svg class="d-block icon icon-primary icon-sm" aria-hidden="true">
+                                <use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-check"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Desktop -->
+                    <div
+                        class="info-progress-wrapper d-none d-lg-flex w-100 px-3 flex-column justify-content-end step-active">
+                        <div
+                            class="info-progress-body d-flex justify-content-between align-self-end align-items-end w-100 py-3">
+                            <span class="d-block h-100 title-medium text-uppercase">Applicazione Penalità</span>
+                        </div>
+                    </div>
+
+                    <!-- Mobile -->
+                    <div class="iscrizioni-header d-lg-none w-100">
+                        <h4 class="step-title d-flex align-items-center justify-content-between drop-shadow">
+                            <span class="d-block d-lg-inline"> Dati generali </span>
+                            <span class="step">2/2</span>
+                        </h4>
+                        <p class="title-xsmall mt-40 mb-3">I campi contraddistinti dal simbolo asterisco sono
+                            obbligatori</p>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div id="arrow-btn" class="flex justify-between items-center mt-6">
-                <button id="before-btn" type="button"
-                    class="btn bg-blue-500 text-white px-4 py-2 w-24  rounded-lg shadow-md hover:bg-blue-600 transition duration-300 ease-in-out">←</button>
-                <button id="next-btn" type="button"
-                    class="btn bg-blue-500 text-white px-4 py-2 w-24 rounded-lg shadow-md hover:bg-blue-600 transition duration-300 ease-in-out">→</button>
+
+        <div class="cmp-card mb-4">
+            <div class="card has-bkg-grey shadow-sm mb-0">
+                <div class="card-header border-0 p-0 mb-lg-30">
+                    <div class="d-flex">
+                        <h3 class="subtitle-large mb-0" id="">Estremi del Sinistro</h3>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <div class="cmp-info-summary bg-white mb-4 mb-lg-30 p-3 p-lg-4">
+                        <div class="card">
+                            <div
+                                class="card-header border-bottom border-light p-0 mb-0 d-flex justify-content-between d-flex justify-content-end">
+                                <h3 id="nomeCognome" class="title-large-semi-bold mb-3"></h3>
+                            </div>
+
+                            <div class="card-body p-0">
+                            <div class="single-line-info border-light">
+                                    <div class="text-paragraph-small">Codice Fiscale</div>
+                                    <div class="border-light border-0">
+                                        <p class="data-text" id="CF"></p>
+                                    </div>
+                                </div>
+                                <div class="single-line-info border-light">
+                                    <div class="text-paragraph-small">Numero Patente</div>
+                                    <div class="border-light border-0">
+                                        <p class="data-text"  id="numeroPatente"></p>
+                                    </div>
+                                </div>
+                                <div class="single-line-info border-light">
+                                    <div class="text-paragraph-small">Punti Patente</div>
+                                    <div class="border-light border-0">
+                                        <p class="data-text" id="puntiPatente"></p>
+                                    </div>
+                                </div>
+                                <div class="single-line-info border-light">
+                                    <div class="text-paragraph-small">Sinistri Precendenti</div>
+                                    <div id="sinistri" class="border-light">
+                                        <p class="data-text" id="payment-code"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer p-0 d-none"></div>
+                        </div>
+                    </div>
+                    <div class="card-header border-0 p-0 mb-lg-30">
+                        <div class="d-flex">
+                            <h3 class="subtitle-large mb-0" id="">Penalità Punti</h3>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="cmp-info-summary bg-white p-3 p-lg-4">
+                            <div class="card">
+                                <div class="card-body p-0">
+                                    <div class="single-line-info border-light">
+                                        <div class="text-paragraph-small">Togli punti</div>
+                                        <div class="mb-6">
+                                            <input value="0" id="remove-points" type="number" min="0" max="15" class="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer p-0 d-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button style="background-color: rgb(239 68 68 / var(--tw-bg-opacity))" id="ritira-btn"
+                        class=" btn  w-100">RITIRA PATENTE</button>
+
+                        <button id="salva-btn" class="btn btn-primary fw-bold">Salva</button>
+                </div>
             </div>
         </div>
 
-        <button id="salva-btn"
-            class="btn bg-green-500 text-white w-[25%] py-3 rounded-lg shadow-md hover:bg-green-600 transition duration-300 ease-in-out">Salva</button>
+        
+
+        <div class="cmp-nav-steps">
+            <nav class="steppers-nav">
+                <button id="before-btn" type="button" class="btn btn-sm steppers-btn-prev p-0">
+                    <svg class="icon icon-primary icon-sm" aria-hidden="true">
+                        <use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-chevron-left"></use>
+                    </svg>
+                    <span class="text-button-sm t-primary">Indietro</span>
+                </button>
+
+
+                <button id="next-btn" type="button" class="btn btn-primary btn-sm steppers-btn-confirm">
+                    <span class="text-button-sm">Avanti</span>
+                    <svg class="icon icon-white icon-sm" aria-hidden="true">
+                        <use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-chevron-right"></use>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+
+        
     </div>
+
+
+
 
 </body>
 
+<script>
+    window.__PUBLIC_PATH__ = "../assets/bootstrap-italia/dist/fonts";
+</script>
+<script src="../assets/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js"></script>
+
+<script src="../assets/script/store.js"></script>
+<script src="../assets/script/pages/info.js"></script>
 <script>
     $(document).ready(function () {
 
@@ -146,13 +257,12 @@ if ($_SESSION["logged-in"] == false) {
 
 
                         $("#nomeCognome").text(data["nome"] + " " + data["cognome"]);
+                        $("#CF").text(data["CF"]);
                         $("#numeroPatente").text(data["numeroPatente"]);
                         $("#puntiPatente").text(data["puntiPatente"]);
 
 
                         loadSinistri(codFiscale);
-
-
 
                     }
                 }
@@ -196,7 +306,7 @@ if ($_SESSION["logged-in"] == false) {
                                 array_cf.forEach(cf => {
                                     if (cf == codFiscale) {
                                         sinistroExist = true;
-                                        sinistriPrecedenti += "<p id='" + barcode + "' class='barcode'>" + barcode + "</p>"
+                                        sinistriPrecedenti += "<p id='" + barcode + "' class='data-text barcode'>" + barcode + "</p>"
                                     }
 
                                 })
@@ -248,22 +358,18 @@ if ($_SESSION["logged-in"] == false) {
             $(".barcode").remove();
             checkPatente();
             if (currentGuidatore == 0) {
-                $("#before-btn").hide();
                 $("#arrow-btn").removeClass("justify-between");
                 $("#arrow-btn").addClass("justify-end");
             } else {
-                $("#before-btn").show()
                 $("#arrow-btn").removeClass("justify-end");
                 $("#arrow-btn").addClass("justify-between");
 
             }
 
             if (currentGuidatore == totGuidatori) {
-                $("#next-btn").hide();
                 $("#salva-btn").show();
 
             } else {
-                $("#next-btn").show();
                 $("#salva-btn").hide();
             }
 
@@ -296,7 +402,7 @@ if ($_SESSION["logged-in"] == false) {
                     $("#ritira-btn").text("PATENTE RITIRATA");
                     newData[cf_list[currentGuidatore]][1] = false;
                 } else {
-                    $("#ritira-btn").text("Ritira Patente");
+                    $("#ritira-btn").text("RITIRA PATENTE");
                     newData[cf_list[currentGuidatore]][1] = true;
 
                 }
@@ -324,7 +430,7 @@ if ($_SESSION["logged-in"] == false) {
                     success: function (rtn) {
                         if (rtn == true) {
                             sessionStorage.setItem("messaggioSinistro", "true");
-                            window.location.replace("..index.php");
+                            window.location.replace("../index.php");
                             //alert("Modifiche avvenute con successo :" +rtn)
                         } else {
                             alert("Errore durante la modifica: " + rtn);
