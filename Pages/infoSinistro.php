@@ -151,9 +151,9 @@
 
                                   <div class="card-body p-0">
                                     <div class="single-line-info border-light">
-                                      <div class="text-paragraph-small">Nome</div>
+                                      <div class="text-paragraph-small">Causa Incidente</div>
                                       <div class="border-light">
-                                        <p id="causaIncidente" class="data-text">Giulia</p>
+                                        <p id="causaIncidente" class="data-text"></p>
                                       </div>
                                     </div>
                                     <div class="single-line-info border-light">

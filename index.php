@@ -184,7 +184,7 @@
                       <div class="form-group cmp-input mb-0 mt-0">
                         <label class="cmp-input__label" for="code">BARCODE</label>
                         <input type="text" maxlenght="16" class="form-control" id="code" required />
-                        <button id="btn-invia-codice" class="btn btn-primary fw-bold">Paga online</button>
+                        <button id="btn-invia-codice" class="btn btn-primary fw-bold">Controlla</button>
                       </div>
                       <!-- show when error -->
                       <div class="form-feedback just-validate-error-label d-none" id="code-error">
@@ -326,19 +326,6 @@
                         raddoppiata più gli interessi.</span>
                     </li>
                   </ul>
-                </section>
-
-                <section class="mb-30 has-bg-grey p-4">
-                  <h2 class="mb-3" id="service-access">Accedi al servizio</h2>
-                  <p class="text-paragraph lora mb-4">
-                    Puoi pagare la multa direttamente online tramite identità
-                    digitale.
-                  </p>
-                  <a href="Pages/loginPage.php">
-                    <button type="button" class="btn btn-primary mobile-full mb-4">
-                      <span>Paga online</span>
-                    </button>
-                  </a>
                 </section>
 
                 <section class="it-page-section">
