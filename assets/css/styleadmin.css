@@ -1,0 +1,386 @@
+.main-btn {
+    background-color: #004DA0;
+    color: white;
+    margin-bottom: 10px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+label {
+    position: relative;
+    font-weight: bold;
+}
+
+h1 {
+    color: #004DA0;
+}
+
+button#add {
+    background-color: #004DA0;
+    color: white;
+    margin-bottom: 10px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/*--------------------------- TABELLA ----------------------------------*/
+
+/* table {
+    width: 100% !important;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #004DA0;
+    color: #fff;
+    font-weight: bold;
+} */
+
+button {
+    padding: 10px;
+    background-color: #004DA0;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+input[type="search" i] {
+    appearance: auto;
+    box-sizing: border-box;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+/*--------------------------- BOTTONI MODIFICA/ELIMINA TABELLA ----------------------------------*/
+
+button.elimina {
+
+    background-color: #ff0000;
+
+}
+
+button.elimina:hover {
+    background-color: #C12E2A;
+}
+
+button.modifica {
+    margin: 5px;
+    background-color: #5cb85c;
+}
+
+button.modifica:hover {
+    background-color: #4CA34C;
+}
+
+/*--------------------------- FORM INSERISCI ----------------------------------*/
+#aggiuntaUtente {
+    margin-left: 25%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: none;
+    max-width: 50%;
+
+}
+
+#modificaUtente {
+    margin-left: 25%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: none;
+    max-width: 50%;
+
+}
+
+#aggiuntaUtente h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#modificaUtente h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#aggiuntaUtente input[type="text"],
+#aggiuntaUtente input[type="email"],
+#aggiuntaUtente select,
+#modificaUtente input[type="text"],
+#modificaUtente input[type="email"],
+#modificaUtente select {
+    width: 100%;
+}
+
+
+#aggiuntaUtente input[type="text"],
+#aggiuntaUtente input[type="email"],
+#aggiuntaUtente select {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 8px;
+    width: 95%;
+    margin-bottom: 10px;
+}
+
+#modificaUtente input[type="text"],
+#modificaUtente input[type="email"],
+#modificaUtente select {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 8px;
+    width: 95%;
+    margin-bottom: 10px;
+}
+
+#aggiuntaUtente button:first-child,
+#modificaUtente button:first-child {
+    margin-right: 10px;
+    /* Aggiungi margine destro al primo pulsante (Aggiungi o Modifica) */
+}
+
+#aggiuntaUtente,
+#modificaUtente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#aggiuntaUtente button {
+    background-color: #004DA0;
+    color: white;
+    margin-bottom: 10px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    width: 50%;
+}
+
+#modificaUtente button {
+    background-color: #004DA0;
+    color: white;
+    margin-bottom: 10px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    width: 50%;
+}
+
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#aggiuntaUtente button:hover {
+    background-color: #0069d9;
+}
+
+#aggiuntaUtente button:focus {
+    outline: none;
+}
+
+/*--------------------------- FORM MODIFICA ----------------------------------*/
+
+
+
+
+
+
+#modificaUtente button:hover {
+    background-color: #0069d9;
+}
+
+#modificaUtente button:focus {
+    outline: none;
+}
+
+#logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-width: 100px;
+    /* Modifica la larghezza massima a tuo piacimento */
+}
+
+#copyright {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 10px;
+    font-size: 12px;
+    color: #555;
+}
+
+.flatpickr-input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    .table-container {
+        max-height: 400px;
+        /* Imposta un'altezza massima per il contenitore della tabella */
+        overflow-y: scroll;
+        /* Abilita la barra di scorrimento verticale */
+    }
+
+    .table-container::-webkit-scrollbar {
+        width: 4px;
+        /* Imposta la larghezza della barra di scorrimento */
+    }
+
+    .table-container::-webkit-scrollbar-track {
+        background-color: #f5f5f5;
+        /* Imposta il colore di sfondo della barra di scorrimento */
+    }
+
+    .table-container::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        /* Imposta il colore della maniglia della barra di scorrimento */
+        border-radius: 5px;
+        /* Aggiungi un bordo arrotondato alla maniglia della barra di scorrimento */
+    }
+
+
+    body {
+        font-size: 14px;
+        /* Riduci la dimensione del carattere */
+    }
+
+    button {
+        padding: 5px;
+        /* Riduci la dimensione dei pulsanti */
+        font-size: 14px;
+        /* Riduci la dimensione del carattere dei pulsanti */
+    }
+
+    #tableButton {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    #copyright {
+        position: flex;
+        bottom: 0px;
+        width: 100%;
+        text-align: center;
+        background-color: #f8f8f8;
+        padding: 10px;
+        font-size: 12px;
+        color: #555;
+    }
+
+    @media screen and (max-width: 768px) {
+
+        /*--------------------------- FORM AGGINGI ----------------------------------*/
+        #aggiuntaUtente {
+            margin-left: 0;
+            padding: 10px;
+            max-width: 100%;
+        }
+
+        #aggiuntaUtente h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        #aggiuntaUtente input[type="text"],
+        #aggiuntaUtente input[type="email"],
+        #aggiuntaUtente select {
+            width: 95%;
+            margin-bottom: 5px;
+        }
+
+        #aggiuntaUtente button {
+            font-size: 1em;
+            padding: 5px 10px;
+            margin-right: 5px;
+        }
+
+        /*--------------------------- FORM MODIFICA ----------------------------------*/
+        #modificaUtente {
+            margin-left: 0;
+            padding: 10px;
+            max-width: 100%;
+        }
+
+        #modificaUtente h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        #modificaUtente input[type="text"],
+        #modificaUtente input[type="email"],
+        #modificaUtente select {
+            width: 95%;
+            margin-bottom: 5px;
+        }
+
+        #modificaUtente button {
+            font-size: 1em;
+            padding: 5px 10px;
+            margin-right: 5px;
+        }
+
+
+        table,
+        th,
+        td {
+            padding: 8px;
+            /* Riduci il padding per adattarlo meglio ai dispositivi mobili */
+        }
+    }
+}

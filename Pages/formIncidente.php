@@ -46,7 +46,7 @@ if ($_SESSION["logged-in"] == false) {
                     <h1 class="title-xxxlarge">Inserimento Sinistro</h1>
                     <p class="subtitle-small">
                         Hai bisogno di assistenza?
-                        <a href="" class="title-small-semi-bold t-primary">Contattaci</a>
+                        <a href="mailto:therealfossi@altervista.org" class="title-small-semi-bold t-primary">Contattaci</a>
                     </p>
                 </div>
             </div>
@@ -367,9 +367,7 @@ if ($_SESSION["logged-in"] == false) {
         window.__PUBLIC_PATH__ = "../assets/bootstrap-italia/dist/fonts";
     </script>
     <script src="../assets/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js"></script>
-
     <script src="../assets/script/store.js"></script>
-    <script src="../assets/script/pages/info.js"></script>
 
 
 </body>

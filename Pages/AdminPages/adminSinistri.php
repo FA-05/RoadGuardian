@@ -25,23 +25,23 @@ if ($_SESSION["logged-in"] == true && $_SESSION["tipo"] == "admin") {
 
 <body>
 
-<nav>
-     <?PHP
-    include ("../navbarAdmin.php")
-        ?>
-        
-</nav>
+    <nav>
+        <?PHP
+        include ("../navbarAdmin.php")
+            ?>
 
+    </nav>
+    <div class="mx-4">
         <div class="flex justify-center items-center mt-7">
             <div role="tablist" class="tabs tabs-boxed w-[400px]">
                 <a href="adminSinistri.php" role="tab" class="tab tab-active ">Sinistri</a>
                 <a href="adminPatentati.php" role="tab" class="tab">Patentati</a>
                 <a href="adminVeicoli.php" role="tab" class="tab">Veicoli</a>
-
             </div>
         </div>
 
-
+        <input type="text" id="searchInput" placeholder="Cerca..."
+            style="padding: 8px; border-radius: 4px; border: 1px solid #ccc; width: 25%">
 
         <table id="Table" class="table mt-12">
             <tr>
@@ -118,16 +118,41 @@ if ($_SESSION["logged-in"] == true && $_SESSION["tipo"] == "admin") {
             $("#Table").append($table);
         }
 
+        document.getElementById('searchInput').addEventListener('keyup', function () {
+            var input = this.value.toLowerCase(); // Ottieni il testo di ricerca in minuscolo
+            var rows = document.querySelectorAll("#Table tr"); // Ottieni tutte le righe della tabella
 
-      
+            // Itera su ogni riga della tabella
+            rows.forEach(function (row) {
+                var cells = row.getElementsByTagName("td"); // Ottieni le celle della riga
+
+                // Controlla se una delle celle contiene il testo di ricerca
+                var found = false;
+                for (var i = 0; i < cells.length; i++) {
+                    var cell = cells[i];
+                    if (cell.textContent.toLowerCase().indexOf(input) > -1) {
+                        found = true;
+                        break;
+                    }
+                }
+
+                // Mostra o nascondi la riga in base al risultato della ricerca
+                if (found) {
+                    row.style.display = ""; // Mostra la riga
+                } else {
+                    row.style.display = "none"; // Nascondi la riga
+                }
+            });
+        });
+
+
+
     });
 </script>
 <script>
     window.__PUBLIC_PATH__ = '../../assets/bootstrap-italia/dist/fonts';
-  </script>
-  <script src="../../assets/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js"></script>
-  <script src="../../assets/script/scripts.js"></script>
-  <script src="../../assets/script/store.js"></script>
-  <script src="../../assets/script/pages/privacy.js"></script>
+</script>
+<script src="../../assets/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js"></script>
+<script src="../../assets/script/store.js"></script>
 
 </html>

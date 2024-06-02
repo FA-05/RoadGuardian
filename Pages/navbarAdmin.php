@@ -70,28 +70,28 @@
                     <span>Seguici su</span>
                     <ul>
                       <li>
-                        <a href="#" target="_blank">
+                        <a href="https://x.com/poliziadistato?s=09" target="_blank">
                           <svg class="icon icon-sm icon-white align-top">
                             <use xlink:href="../../assets/bootstrap-italia/dist/svg/sprites.svg#it-twitter"></use>
                           </svg>
                           <span class="visually-hidden">Twitter</span></a>
                       </li>
                       <li>
-                        <a href="#" target="_blank">
+                        <a href="https://www.facebook.com/QuesturadiTrento" target="_blank">
                           <svg class="icon icon-sm icon-white align-top">
                             <use xlink:href="../../assets/bootstrap-italia/dist/svg/sprites.svg#it-facebook"></use>
                           </svg>
                           <span class="visually-hidden">Facebook</span></a>
                       </li>
                       <li>
-                        <a href="#" target="_blank">
+                        <a href="http://www.youtube.com/@mattiacaldera" target="_blank">
                           <svg class="icon icon-sm icon-white align-top">
                             <use xlink:href="../../assets/bootstrap-italia/dist/svg/sprites.svg#it-youtube"></use>
                           </svg>
                           <span class="visually-hidden">YouTube</span></a>
                       </li>
                       <li>
-                        <a href="#" target="_blank">
+                        <a href="https://t.me/dpcpat1" target="_blank">
                           <svg class="icon icon-sm icon-white align-top">
                             <use xlink:href="../../assets/bootstrap-italia/dist/svg/sprites.svg#it-telegram"></use>
                           </svg>

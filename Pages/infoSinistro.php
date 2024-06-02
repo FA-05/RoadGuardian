@@ -52,7 +52,7 @@
 
             <p class="subtitle-small mt-lg-2">
               Hai bisogno di assistenza?
-              <a class="title-small-semi-bold t-primary" href="#">Contattaci</a>
+              <a class="title-small-semi-bold t-primary" href="mailto:therealfossi@altervista.org">Contattaci</a>
             </p>
           </div>
         </div>

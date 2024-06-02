@@ -43,7 +43,6 @@ CREATE TABLE `patentati` (
 --
 
 INSERT INTO `patentati` (`CF`, `nome`, `cognome`, `numeroPatente`, `puntiPatente`, `indirizzo`, `email`, `patenteRitirata`) VALUES
-('LCABNC80A01H501Z', 'Luca', 'Bianchi', 'A1B2C3D4E5', 18, 'Via Roma 1', 'luca.bianchi@gmail.com', 0),
 ('GLVVRD80A01H501X', 'Giulia', 'Verdi', 'F6G7H8I9J0', 0, 'Via Milano 2', 'giulia.verdi@gmail.com', 0),
 ('MRCNER80A01H501Y', 'Marco', 'Neri', 'K1L2M3N4O5', 13, 'Via Napoli 3', 'marco.neri@gmail.com', 0),
 ('ANARSS80A01H501P', 'Anna', 'Russo', 'P6Q7R8S9T0', 32, 'Via Torino 4', 'anna.russo@gmail.com', 0),
@@ -84,8 +83,6 @@ INSERT INTO `patentati` (`CF`, `nome`, `cognome`, `numeroPatente`, `puntiPatente
 ('VLNGRN80A01H501Y', 'Valentina', 'Grillo', 'N1O2P3Q4R5', 30, 'Via Pescara 39', 'valentina.grillo@gmail.com', 0),
 ('MRTGRN80A01H501Z', 'Marta', 'Grandi', 'S6T7U8V9W0', 25, 'Via Vercelli 40', 'marta.grandi@gmail.com', 0),
 ('LCABNC80A01H501Z', 'Luca', 'Bianchi', 'A1B2C3D4E5', 18, 'Via Roma 1', 'luca.bianchi@gmail.com', 0),
-('GLVVRD80A01H501X', 'Giulia', 'Verdi', 'F6G7H8I9J0', 0, 'Via Milano 2', 'giulia.verdi@gmail.com', 0),
-('MRCNER80A01H501Y', 'Marco', 'Neri', 'K1L2M3N4O5', 13, 'Via Napoli 3', 'marco.neri@gmail.com', 0),
 ('FRNSMM80A01H501A', 'Francesco', 'Mori', 'P6Q7R8S9T0', 10, 'Via Firenze 4', 'francesco.mori@gmail.com', 0),
 ('SLCGTR80A01H501B', 'Salvatore', 'Gialli', 'U1V2W3X4Y5', 15, 'Via Torino 5', 'salvatore.gialli@gmail.com', 1),
 ('ANNBRZ80A01H501C', 'Anna', 'Bronzi', 'Z6A7B8C9D0', 18, 'Via Genova 6', 'anna.bronzi@gmail.com', 0),
@@ -120,7 +117,6 @@ INSERT INTO `patentati` (`CF`, `nome`, `cognome`, `numeroPatente`, `puntiPatente
 ('MRTGDN80A01H501G', 'Marta', 'Gold', 'T1U2V3W4X5', 13, 'Via Lucca 35', 'marta.gold@gmail.com', 0),
 ('PRTNCR80A01H501H', 'Pietro', 'Neri', 'Y6Z7A8B9C0', 18, 'Via Siena 36', 'pietro.neri@gmail.com', 1),
 ('CMRNZZ80A01H501I', 'Carla', 'Nuzzi', 'D1E2F3G4H5', 11, 'Via Verona 37', 'carla.nuzzi@gmail.com', 0),
-('LMNTLC80A01H501J', 'Lamont', 'Lenci', 'I6J7K8L9M0', 15, 'Via Brescia 38', 'lamont.lenci@gmail.com', 0),
 ('MRTCLL80A01H501K', 'Martina', 'Colli', 'N1O2P3Q4R5', 20, 'Via Bergamo 39', 'martina.colli@gmail.com', 1),
 ('LCRLLN80A01H501L', 'Luciano', 'Rollini', 'S6T7U8V9W0', 17, 'Via Ancona 40', 'luciano.rollini@gmail.com', 0),
 ('LSPTRR80A01H501M', 'Lorenzo', 'Porri', 'X1Y2Z3A4B5', 14, 'Via Taranto 41', 'lorenzo.porri@gmail.com', 0),

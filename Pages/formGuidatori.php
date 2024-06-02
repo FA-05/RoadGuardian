@@ -47,7 +47,7 @@ if ($_SESSION["logged-in"] == false) {
                     <h1 class="title-xxxlarge">Applicazione Penalità</h1>
                     <p class="subtitle-small">
                         Hai bisogno di assistenza?
-                        <a href="" class="title-small-semi-bold t-primary">Contattaci</a>
+                        <a href="mailto:therealfossi@altervista.org" class="title-small-semi-bold t-primary">Contattaci</a>
                     </p>
                 </div>
             </div>
@@ -61,7 +61,7 @@ if ($_SESSION["logged-in"] == false) {
                             <span class="d-block h-100 title-medium text-uppercase">Inserimento Sinistro</span>
 
                             <svg class="d-block icon icon-primary icon-sm" aria-hidden="true">
-                                <use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-check"></use>
+                            <use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-check"></use>
                             </svg>
                         </div>
                     </div>
@@ -192,9 +192,7 @@ if ($_SESSION["logged-in"] == false) {
     window.__PUBLIC_PATH__ = "../assets/bootstrap-italia/dist/fonts";
 </script>
 <script src="../assets/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js"></script>
-
 <script src="../assets/script/store.js"></script>
-<script src="../assets/script/pages/info.js"></script>
 <script>
     $(document).ready(function () {
 
@@ -428,6 +426,7 @@ if ($_SESSION["logged-in"] == false) {
                     data: { dati: dati, cf_list: cf_list },
                     success: function (rtn) {
                         if (rtn == true) {
+                            alert("Sinistro aggiunto, per visualizzare info sul sinistro immettere codice barcode: " + BARCODE);
                             sessionStorage.setItem("messaggioSinistro", "true");
                             window.location.replace("../index.php");
                             //alert("Modifiche avvenute con successo :" +rtn)

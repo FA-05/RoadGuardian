@@ -52,15 +52,6 @@
         <span>Credenziali Sbagliate</span>
     </div>
 
-
-
-    <?PHP
-
-    include ("footer.php")
-
-        ?>
-
-
 </body>
 
 <script>

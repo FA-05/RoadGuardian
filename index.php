@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta http-equiv="Content-Language" content="en" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Pagamenti - Polizia dei negri</title>
+  <title>Pagamenti - Polizia di Trento</title>
 
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
@@ -100,28 +100,28 @@
                     <span>Seguici su</span>
                     <ul>
                       <li>
-                        <a href="#" target="_blank">
+                        <a href="https://x.com/poliziadistato?s=09" target="_blank">
                           <svg class="icon icon-sm icon-white align-top">
                             <use xlink:href="assets/bootstrap-italia/dist/svg/sprites.svg#it-twitter"></use>
                           </svg>
                           <span class="visually-hidden">Twitter</span></a>
                       </li>
                       <li>
-                        <a href="#" target="_blank">
+                        <a href="https://www.facebook.com/QuesturadiTrento" target="_blank">
                           <svg class="icon icon-sm icon-white align-top">
                             <use xlink:href="assets/bootstrap-italia/dist/svg/sprites.svg#it-facebook"></use>
                           </svg>
                           <span class="visually-hidden">Facebook</span></a>
                       </li>
                       <li>
-                        <a href="#" target="_blank">
+                        <a href="http://www.youtube.com/@mattiacaldera" target="_blank">
                           <svg class="icon icon-sm icon-white align-top">
                             <use xlink:href="assets/bootstrap-italia/dist/svg/sprites.svg#it-youtube"></use>
                           </svg>
                           <span class="visually-hidden">YouTube</span></a>
                       </li>
                       <li>
-                        <a href="#" target="_blank">
+                        <a href="https://t.me/dpcpat1" target="_blank">
                           <svg class="icon icon-sm icon-white align-top">
                             <use xlink:href="assets/bootstrap-italia/dist/svg/sprites.svg#it-telegram"></use>
                           </svg>
@@ -155,7 +155,7 @@
             <div class="row">
               <div class="col-lg-8">
                 <h1 class="title-xxxlarge" data-element="service-title">
-                  Pagamento multa
+                  Visualizzazione Sinistri
                 </h1>
 
                 <div class="d-flex flex-wrap cmp-heading__tag">
@@ -165,9 +165,8 @@
                 </div>
 
                 <p class="subtitle-small mb-3">
-                  Il servizio permette di pagare online le multe ricevute
-                  dalla polizia municipale o di prenotare un appuntamento per
-                  pagare presso gli uffici.
+                  Il servizio permette di visualizzare i sinistri ricevuti
+                  dalla polizia municipale.
                 </p>
 
                 <div class="cmp-card mb-0">
@@ -179,7 +178,7 @@
                     </div>
                     <div class="card-body p-0">
                       <p class="subtitle-small pb-4 mb-0">
-                        Inserisci il codice a barre per vedere se ci sono multe da pagare
+                        Inserisci il codice a barre per vedere se ci sono sinistri
                       </p>
                       <!-- 'is-invalid' class for error -->
                       <div class="form-group cmp-input mb-0 mt-0">
@@ -298,9 +297,9 @@
                     Per il pagamento delle multe, assicurati di avere:
                   </p>
                   <ul class="list-wrapper lora">
-                    <li class="list-item"><span>la notifica della multa;</span></li>
+                    <li class="list-item"><span>la notifica del sinistro;</span></li>
                     <li class="list-item">
-                      <span>di avere a presso il codice fiscale per accedere</span>
+                      <span>di avere a presso il codice barcode </span>
                     </li>
                     <li class="list-item"><span>la targa del veicolo;</span></li>
                     <li class="list-item">
@@ -358,9 +357,9 @@
                               <br />
                               0465 696969
                               <br />
-                              <a class="" href="mailto:ufficiotributia@email.it"
-                                aria-label="Invia una email a ufficiotributi@email.it"
-                                title="Invia una email a ufficiotributi@email.it">balls@email.it</a>
+                              <a class="" href="mailto:therealfossi@altervista.org"
+                                aria-label="Invia una email a therealfossi@altervista.org"
+                                title="Invia una email a therealfossi@altervista.org">therealfossi@altervista.org</a>
                             </p>
                           </div>
                           <div class="avatar size-xl">
