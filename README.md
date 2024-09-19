@@ -26,8 +26,7 @@ To build this web application, I used the following technologies:
 
 
 ## Database Structure:
+![drawSQL-image](Progettazione/Tables.png "Tables")
 ![drawSQL-image](Progettazione/ER-Model "ER-MODEL")
 
-
-![drawSQL-image](Progettazione/Tables.png "Tables")
 
