@@ -8,14 +8,14 @@ Each report is identified by a barcode, enabling people to easily access the rep
 
 <br><br><br>
 
-## How to navigate through the website:
-You can log in as an admin to view all the data:
-\nUsername: admin
-\nPassword: admin
+## How to navigate through the website:\
+You can log in as an admin to view all the data:\
+Username: admin\
+Password: admin\
 
-You can also log in as a police officer to issue fines or report accidents:
-**Username**: Vigile4
-**Password**: 123
+You can also log in as a police officer to issue fines or report accidents:\
+**Username**: Vigile4\
+**Password**: 123\
 
 Once a fine has been created, users can view its details by entering the barcode at the bottom of the homepage.
 
