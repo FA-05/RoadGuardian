@@ -9,7 +9,6 @@ Each report is identified by a barcode, enabling people to easily access the rep
 \
 \
 \
-\
 
 ## How to navigate through the website:
 You can log in as an admin to view all the data:
@@ -22,7 +21,9 @@ You can also log in as a police officer to issue fines or report accidents:
 
 Once a fine has been created, users can view its details by entering the barcode at the bottom of the homepage.
 
-
+\
+\
+\
 
 
 ## Tech-Stack:
@@ -30,13 +31,14 @@ To build this web application, I used the following technologies:
 **Front-end**: HTML, JavaScript, AJAX, jQuery, Tailwind CSS, and DaisyUI (for UI components).
 **Back-end**: PHP, MySQL.
 
-
-
+\
+\
+\
 
 ## Database Structure:
 ![drawSQL-image](Progettazione/Tables.png "Tables")
 
-
+\
 
 ![drawSQL-image](Progettazione/ER-Model "ER-MODEL")
 
