@@ -5,10 +5,10 @@ Visit the website: 🌐 https://roadg.altervista.org/ 🌐
 RoadGuardian is my final year project at high school [ITT Buonarroti](https://www.buonarroti.tn.it/).
 This platform allows police officers to issue fines or report accidents.
 Each report is identified by a barcode, enabling people to easily access the report details.
-
-
-
-
+\
+\
+\
+\
 ## How to navigate through the website:
 You can log in as an admin to view all the data:
 Username: admin
