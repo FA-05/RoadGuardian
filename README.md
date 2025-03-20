@@ -10,7 +10,7 @@ Each report is identified by a barcode, enabling people to easily access the rep
 
 <br><br>
 
-## How to navigate through the website:\
+## How to navigate through the website:
 You can log in as an admin to view all the data:\
 **Username**: admin\
 **Password**: admin
